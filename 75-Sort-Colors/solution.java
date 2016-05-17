@@ -1,5 +1,7 @@
 public class Solution {
     public void sortColors(int[] nums) {
+        if (nums == null || nums.length < 2) return;
+        
         int count0 = 0, count1 = 1, count2 = 2;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 0) {
