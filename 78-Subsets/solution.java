@@ -14,12 +14,11 @@ public class Solution {
     // }
     // return collection;
         List<List<Integer>> res = new ArrayList<>();
-        res.add(new ArrayList<Integer>());
-
+        res.add(new ArrayList<>());
         Arrays.sort(nums);
-        for(int i : nums) {
+        for (int i : nums) {
             List<List<Integer>> tmp = new ArrayList<>();
-            for(List<Integer> sub : res) {
+            for (List<Integer> sub : res) {
                 List<Integer> a = new ArrayList<>(sub);
                 a.add(i);
                 tmp.add(a);
