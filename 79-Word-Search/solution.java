@@ -15,10 +15,10 @@ public class Solution {
             return false;
         }
         board[x][y] = '*';
-        boolean result = exist(board, word, x + 1, y, i + 1) ||
-                         exist(board, word, x - 1, y, i + 1) ||
-                         exist(board, word, x, y + 1, i + 1) ||
-                         exist(board, word, x, y - 1, i + 1) ||
+        boolean result = exist(board, word, x + 1, y, i + 1)
+                         || exist(board, word, x - 1, y, i + 1) 
+                         || exist(board, word, x, y + 1, i + 1) 
+                         || exist(board, word, x, y - 1, i + 1); 
                          
         board[x][y] = word.charAt(i);
         return result;
