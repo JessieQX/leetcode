@@ -21,6 +21,6 @@ public class Solution {
         for (int i = count0 + count1; i < count0 + count1 + count2; i++) {
             nums[i] = 2;
         }
-        return nums;
+        //return nums;
     }
 }
