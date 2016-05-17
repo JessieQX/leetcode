@@ -13,7 +13,7 @@ public class Solution {
             }
         }
         for (int i = 0; i < count0; i++) {
-            num[i] = 0;
+            nums[i] = 0;
         }
         for (int i = count0; i < count0 + count1; i++) {
             nums[i] = 1;
