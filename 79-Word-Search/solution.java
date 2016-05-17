@@ -10,7 +10,7 @@ public class Solution {
         return false;
     }
     private boolean exist(char[][] board, String word, int x, int y, int i) {
-        if (i == word.length) return true;
+        if (i == word.length()) return true;
         if (x < 0 || y < 0 || x = board.length || y = board[x].length || board[x][y] != word.charAt(i)) {
             return false;
         }
