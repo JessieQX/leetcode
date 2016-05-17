@@ -9,7 +9,6 @@ public class Solution {
                 List<Integer> a = new ArrayList<>(sub);
                 a.add(i);
                 if (res.contains(a)) {
-                    //System.out.println(a);
                     continue;
                 }
                 tmp.add(a);
