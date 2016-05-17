@@ -16,8 +16,8 @@ public class Solution {
         List<List<Integer>> res = new ArrayList<>();
         res.add(new ArrayList<Integer>());
 
-        Arrays.sort(S);
-        for(int i : S) {
+        Arrays.sort(nums);
+        for(int i : nums) {
             List<List<Integer>> tmp = new ArrayList<>();
             for(List<Integer> sub : res) {
                 List<Integer> a = new ArrayList<>(sub);
