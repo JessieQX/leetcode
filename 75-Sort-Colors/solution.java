@@ -3,7 +3,7 @@ public class Solution {
         if (nums == null || nums.length < 2) return;
         int low = 0;
         int high = nums.length - 1;
-        for (int i = low; i <= high) {
+        for (int i = low; i <= high;) {
             if (nums[i] == 0) {
                 int temp = nums[i];
                 nums[i] = nums[low];
