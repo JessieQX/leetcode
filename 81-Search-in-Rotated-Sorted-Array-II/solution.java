@@ -1,7 +1,8 @@
 public class Solution {
     public boolean search(int[] nums, int target) {
         int start  = 0, end = nums.length - 1;
-
+        //check mid is in sorted part or rotated part, then check target is in left of mid or in right of mid
+        
         //check each num so we will check start == end
         //We always get a sorted part and a half part
         //we can check sorted part to decide where to go next
