@@ -4,7 +4,7 @@ public class Solution {
         int col = matrix[0].length;
         
         int start = 0, end = row - 1;
-        while (start  + 1< end) {
+        while (start + 1< end) {
             int mid = start + (end - start) / 2;
             if (matrix[mid][0] == target) {
                 return true;
@@ -36,11 +36,12 @@ public class Solution {
                 end = mid;
             }
         }
-        if (matrix[row][start] == target) {
-            return true;
-        } else if (matrix[row][end] == target) {
-            return true;
-        }
+        // if (matrix[row][start] == target) {
+        //     return true;
+        // } else if (matrix[row][end] == target) {
+        //     return true;
+        // }
+        if (matrix[row][start] == target || matrix[row][end] == target) return true;
         return false;
     }
     
