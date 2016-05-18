@@ -11,11 +11,11 @@ public class Solution {
                 res.add(nums2[i]);
             }
         }
-        // int[] intersection = new int[res.size()];
-        // for (int i = 0; i < intersection.length; i++) {
-        //     intersection[i] = res.toArray
-        // }
-        int[] intersaction = res.toArray(new intersaction[res.size()]);
+        int i = 0;
+        int[] intersection = new int[res.size()];
+        for (int num : res) {
+            intersaction[i++] = num;
+        }
         return intersaction;
     }
 }
