@@ -15,7 +15,7 @@ public class Solution {
         // for (int i = 0; i < intersection.length; i++) {
         //     intersection[i] = res.toArray
         // }
-        int[] intersaction = res.toArray(new intersaction[]);
+        int[] intersaction = res.toArray(new intersaction[res.size()]);
         return intersaction;
     }
 }
