@@ -23,7 +23,8 @@ public class Solution {
             return false;
         }
         
-        start = 0, end = col - 1;
+        start = 0; 
+        end = col - 1;
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (matrix[row][mid] == target) {
