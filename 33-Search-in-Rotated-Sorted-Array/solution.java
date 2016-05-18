@@ -20,7 +20,7 @@ public class Solution {
         return -1;
     }
     private int findMinIdx(int[] nums) {
-        int start = 0, end = nums-1;
+        int start = 0, end = nums.length - 1;
         while (start < end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] > nums[end]) {
