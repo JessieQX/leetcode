@@ -2,7 +2,7 @@ public class Solution {
     public boolean search(int[] nums, int target) {
         int midIdx = findMinIdx(nums);
         int len = nums.length;
-        if (target == nums[minIdx]) {
+        if (target == nums[midIdx]) {
             return true;
         }
         int start = (target <= nums[len - 1]) ? minIdx : 0;
