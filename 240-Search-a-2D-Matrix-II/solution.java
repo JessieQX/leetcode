@@ -3,8 +3,8 @@ public class Solution {
         int row = matrix.length;
         int col = matrix[0].length;
         for (int i = 0; i < row; i++) {
-            int start = matrix[i][0], end = matrix[i][col - 1];
-            for (int j = 0; j < col; j++) {
+            int start = 0, end = col - 1;
+            
                 while (start < end) {
                     int mid = start + (end - start) / 2;
                     if (matrix[i][mid] == target) {
@@ -22,7 +22,7 @@ public class Solution {
                 if (matrix[i][end] == target) {
                     return true;
                 }
-            }
+            
         }
         return false;
     }
