@@ -12,7 +12,7 @@ public class Solution {
             }
         }
         int i = 0;
-        int[] intersection = new int[res.size()];
+        int[] intersaction = new int[res.size()];
         for (int num : res) {
             intersaction[i++] = num;
         }
