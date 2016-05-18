@@ -6,8 +6,8 @@ public class Solution {
         }
         int len = nums.length;
         int start = (target <= nums[len - 1]) ? minIdx : 0;
-        int end = (target > num[len - 1]) ? minIdx : len - 1;
-        while (start < end) {
+        int end = (target > nums[len - 1]) ? minIdx : len - 1;
+        while (start <= end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
                 return mid;
