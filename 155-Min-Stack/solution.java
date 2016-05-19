@@ -1,10 +1,10 @@
 public class MinStack {
-    private Stack stack1;
-    private Stack stack2;
+    private Stack<Integer> stack1;
+    private Stack<Integer> stack2;
     /** initialize your data structure here. */
     public MinStack() {
-        stack1 = new Stack();
-        stack2 = new Stack();
+        stack1 = new Stack<>();
+        stack2 = new Stack<>();
     }
     
     public void push(int x) {
