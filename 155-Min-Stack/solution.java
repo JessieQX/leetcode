@@ -12,7 +12,7 @@ public class MinStack {
         if (stack2 == null) {
             stack2.push(x);
         } else {
-            if (x < stack2.peek()) {
+            if (stack1.peek().equals(stack2.peek()) < 0) {
                 stack2.pop();
                 stack2.push(x);
             } 
