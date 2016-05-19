@@ -13,9 +13,4 @@ public class Solution {
         }
         return res;
     }
-    // public static void main(String[] args) {
-    //     TopK topK = new TopK();
-    //     int[] nums = {1,1,2,3,4,3,2,2};
-    //     System.out.println(topK.topKFrequent(nums, 3));
-    // }
 }
