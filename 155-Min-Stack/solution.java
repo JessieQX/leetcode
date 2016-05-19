@@ -9,26 +9,24 @@ public class MinStack {
     
     public void push(int x) {
         stack1.push(x);
-        if (stack2 == null) {
+        if (stack2.isEmpty()) {
             stack2.push(x);
         } else {
-            if (x < (int)stack2.peek()) {
-                stack2.pop();
-                stack2.push(x);
-            } 
+            stack2.push(Math.min(x, stack2.peek()));
         }
     }
     
     public void pop() {
+        stack2.pop();
         stack1.pop();
     }
     
     public int top() {
-        return (int)stack1.peek();
+        return stack1.peek();
     }
     
     public int getMin() {
-        return (int)stack2.peek();
+        return stack2.peek();
     }
 }
 
