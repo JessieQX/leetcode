@@ -35,7 +35,7 @@ public class Solution {
         }
         String a = new String();
         for (String ss : word) {
-            if (ss.length != 0) {
+            if (ss.length() != 0) {
                 a += ss + " ";
             }
         }
