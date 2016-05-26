@@ -5,10 +5,10 @@ public class Solution {
         for (String ss : word) {
             stack.push(ss);
         }
-        StringBuilder sb = new StringBuider();
+        String a = new String();
         for (int i = 0; i < word.size(); i++) {
-            sb.append(stack.pop()).append(" ");
+            a = a + stack.pop() + " ";
         }
-        return sb;
+        return a;
     }
 }
