@@ -7,9 +7,7 @@ public class Solution {
         String[] word = s.trim().split(" ");
         int len = word.length;
         for (String ss : word) {
-            //System.out.println("ss= " + ss);
-            ss = ss.trim();
-            //System.out.println("new ss= " + ss);
+            //ss = ss.trim();
             if (ss.length() == 0) {
                 len--;
             } else {
