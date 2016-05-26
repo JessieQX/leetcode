@@ -21,7 +21,7 @@ public class Solution {
         String[] word = s.trim().split(" ");
         int i = 0, j = word.length - 1;
         while (i < j) {
-            int temp = word[i];
+            String temp = word[i];
             word[i] = word[j];
             word[j] = temp;
             i++;
