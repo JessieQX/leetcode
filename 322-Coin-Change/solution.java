@@ -59,15 +59,15 @@ public class Solution {
             dp[i] = Integer.MAX_VALUE;
         }
 
-        for (int am = 1; am < dp.length; am++) {
-            for (int i = 0; i < coins.length; i++) {
-                if (coins[i] <= am) {
-                    int sub = dp[am - coins[i]];
-                    if (sub != Integer.MAX_VALUE && sub + 1 < dp[am])
-                        dp[am] = sub + 1;
+        for (int i = 1; i < dp.length; i++) {
+            for (int j = 0; j < coins.length; j++) {
+                if (coins[j] <= i) {
+                    int sub = dp[i - coins[j]];
+                    if (sub != Integer.MAX_VALUE && sub + 1 < dp[i])
+                        dp[i] = sub + 1;
                 }
             }
         }
-        return dp[dp.length - 1] == Integer.MAX_VALUE ? -1 : dp[dp.length - 1];
+        return dp[amount] == Integer.MAX_VALUE ? -1 : dp[amount];
     }
 }
