@@ -9,6 +9,7 @@ public class Solution {
                 nums[i - count] = nums[i];
             }
         }
+        //最后几位补0
         for (int i = 0; i < count; i++) {
             nums[nums.length - count + i] = 0;
         }
