@@ -12,9 +12,11 @@ public class Solution {
         
         int[] newDigits = new int[n + 1];
         newDigits[0] = 1;
-        for (int i = 1; i < n + 1; i++) {
-            newDigits[i] = 0;
-        }
+        
+        //default number is 0, so no need to write 0 to the rest of the array
+        // for (int i = 1; i < n + 1; i++) {
+        //     newDigits[i] = 0;
+        // }
         
         return newDigits;
     }
