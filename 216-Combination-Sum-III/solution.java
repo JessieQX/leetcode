@@ -13,7 +13,7 @@ public class Solution {
                 //if (i > start && candidates[i] == candidates[i - 1]) continue;
                 curr.add(i);
                 helper(result, curr, k, target - i, i + 1);
-                curr.remove(curr.size() - 1);
+                curr.remove(curr.size() - 1);//if the result is right, it will turn to result.add() part; if it turns to curr.remove() part, then the number is wrong, so we need to remove it from curr list.
             }
         } else if (target == 0 && curr.size() == k) {
             result.add(new ArrayList<Integer>(curr));
