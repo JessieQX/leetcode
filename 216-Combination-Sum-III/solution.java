@@ -17,6 +17,8 @@ public class Solution {
             }
         } else if (target == 0 && curr.size() == k) {
             result.add(new ArrayList<Integer>(curr));
+        } else {
+            return;
         }
     }
 }
