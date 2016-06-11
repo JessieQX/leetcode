@@ -6,14 +6,14 @@ public class Solution {
         for (int i = 1; i <= s.length(); i++) {
             can[i] = false;
             for (int j = 1; j <= i && j <= maxLength(wordDict); j++) {
-                if (!can[i - j]) break;
-                if (wordDict.contains(s.substring(i - j, j))) {
+                if (!can[i - j]) continue;
+                if (wordDict.contains(s.substring(i - j, i))) {
                     can[i] = true;
                     break;
                 }
             }
         }
-        return false;
+        return can[s.length()];
     }
     private int maxLength(Set<String> wordDict) {
         int max = 0;
