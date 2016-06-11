@@ -10,7 +10,7 @@ public class Solution {
         });
         int[] newWords = new int[words.length];
         for (int i = 0; i < newWords.length; i++) {
-            for (Charater c : words[i].toCharArray()) {
+            for (Character c : words[i].toCharArray()) {
                 newWords[i] |= 1 << (c - 'a');
             }
         }
