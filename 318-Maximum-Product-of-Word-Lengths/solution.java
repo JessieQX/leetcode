@@ -1,7 +1,7 @@
 public class Solution {
     public int maxProduct(String[] words) {
         if (words == null || words.length == 0) {
-            return -1;
+            return 0;
         }
         Arrays.sort(words, new Comparator<String>() {
             public int compare(String s1, String s2) {
@@ -18,7 +18,7 @@ public class Solution {
         for (int i = 0; i < newWords.length - 1; i++) {
             if (words[i].length() * words[i].length() <= max) break;
             for (int j = i + 1; j < newWords.length; j++) {
-                if (newWords[i] & newWords[j] == 0) {
+                if ((newWords[i] & newWords[j]) == 0) {
                     max = Math.max(max, words[i].length() * words[j].length());
                 }
             }
