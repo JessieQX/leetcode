@@ -16,10 +16,10 @@ public class Solution {
         }
         int max = 0;
         for (int i = 0; i < newWords.length - 1; i++) {
-            if (newWords[i].length() * newWords[i].length() <= max) break;
+            if (words[i].length() * words[i].length() <= max) break;
             for (int j = i + 1; j < newWords.length; j++) {
                 if (newWords[i] & newWords[j] == 0) {
-                    max = Math.max(max, newWords[i].length() * newWords[j].length());
+                    max = Math.max(max, words[i].length() * words[j].length());
                 }
             }
         }
