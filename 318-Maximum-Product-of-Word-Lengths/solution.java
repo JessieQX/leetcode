@@ -3,26 +3,26 @@ public class Solution {
         if (words == null || words.length == 0) {
             return -1;
         }
+        Arrays.sort(words, new Comparator<String>() {
+            public int compare(String s1, String s2) {
+                return s2.length() - s1.length();
+            }
+        });
+        int[] newWords = new int[words.length];
+        for (int i = 0; i < newWords.length; i++) {
+            for (Charater c : newWords[i].toCharArray()) {
+                newWords[i] |= 1 << (c - 'a');
+            }
+        }
         int max = 0;
-        for (int i = 0; i < words.length - 1; i++) {
-            for (int j = i + 1; j < words.length; j++) {
-                if (!shareCommonLetter(words[i], words[j])) {
-                    max = Math.max(max, words[i].length() * words[j].length());
+        for (int i = 0; i < newWords.length - 1; i++) {
+            if (newWords[i].length() * newWords[i].length() <= max) break;
+            for (int j = i + 1; j < newWords.length; j++) {
+                if (newWords[i] & newWords[j] == 0) {
+                    max = Math.max(max, newWords[i].length() * newWords[j].length());
                 }
             }
         }
         return max;
-    }
-    private boolean shareCommonLetter(String s1, String s2) {
-        Set<Character> set = new HashSet<>();
-        for (int i = 0; i < s1.length(); i++) {
-            set.add(s1.charAt(i));
-        }
-        for (int j = 0; j < s2.length(); j++) {
-            if (set.contains(s2.charAt(j))) {
-                return true;
-            }
-        }
-        return false;
     }
 }
