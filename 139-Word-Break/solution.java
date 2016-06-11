@@ -17,8 +17,8 @@ public class Solution {
     }
     private int maxLength(Set<String> wordDict) {
         int max = 0;
-        for (int i = 0; i < wordDict.size(); i++) {
-            int len = wordDict.get(i).length();
+        for (String s : wordDict) {
+            int len = s.length();
             max = Math.max(len, max);
         }
         return max;
