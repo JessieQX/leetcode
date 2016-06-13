@@ -18,21 +18,25 @@ public class Solution {
             
             //up to down
             for (int i = rowBegin; i <= rowEnd; i++) {
-                result.add(matrix[i][rowEnd]);
+                result.add(matrix[i][colEnd]);
             }
             colEnd--;
             
             //right to left
-            for (int i = colEnd; i >= colBegin; i--) {
-                result.add(matrix[rowEnd][i]);
+            if (rowBegin <= rowEnd) {
+                for (int i = colEnd; i >= colBegin; i--) {
+                    result.add(matrix[rowEnd][i]);
+                }
             }
             rowEnd--;
             
             //down to up
-            for (int i = rowEnd; i>= rowBegin; i--) {
-                result.add(matrix[i][rowBegin]);
+            if (colBegin <= colEnd) {
+                for (int i = rowEnd; i>= rowBegin; i--) {
+                    result.add(matrix[i][colBegin]);
+                }
             }
-            rowBegin++;
+            colBegin++;
         }
         return result;
     }
