@@ -1,5 +1,8 @@
 public class Solution {
     public int threeSumClosest(int[] nums, int target) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
         int result = 0;
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < nums.length; i++) {
