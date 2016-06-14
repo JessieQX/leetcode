@@ -17,9 +17,9 @@ public class Solution {
                 if (min == Math.abs(x)) {
                     result = target - x;
                 }
-                if (x < 0) m++;
-                if (x > 0) n--;
-                
+                if (x > 0) m++;
+                if (x < 0) n--;
+                if (x == 0) return result;
             }
         }
         return result;
