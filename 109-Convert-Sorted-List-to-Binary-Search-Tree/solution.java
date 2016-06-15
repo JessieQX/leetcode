@@ -28,7 +28,7 @@ public class Solution {
             fast = fast.next.next;
             slow = slow.next;
         }
-        TreeNode node = new TreeNode(show.val);
+        TreeNode node = new TreeNode(slow.val);
         node.left = toBST(head, slow);
         node.right = toBST(slow.next, tail);
         return node;
