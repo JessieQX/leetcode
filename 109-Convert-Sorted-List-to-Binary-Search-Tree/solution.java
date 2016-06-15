@@ -16,21 +16,38 @@
  * }
  */
 public class Solution {
+    // public TreeNode sortedListToBST(ListNode head) {
+    //     if (head == null) return null;
+    //     return toBST(head, null);
+    // }
+    // private TreeNode toBST(ListNode head, ListNode tail) {
+    //     ListNode fast = head;
+    //     ListNode slow = head;
+    //     if (head == tail) return null;
+    //     while (fast != tail && fast.next != tail) {
+    //         fast = fast.next.next;
+    //         slow = slow.next;
+    //     }
+    //     TreeNode node = new TreeNode(slow.val);
+    //     node.left = toBST(head, slow);
+    //     node.right = toBST(slow.next, tail);
+    //     return node;
+    // }
     public TreeNode sortedListToBST(ListNode head) {
-        if (head == null) return null;
-        return toBST(head, null);
+    if(head==null) return null;
+    return toBST(head,null);
+}
+public TreeNode toBST(ListNode head, ListNode tail){
+    ListNode slow = head;
+    ListNode fast = head;
+    if(head==tail) return null;
+
+    while(fast!=tail&&fast.next!=tail){
+        fast = fast.next.next;
+        slow = slow.next;
     }
-    private TreeNode toBST(ListNode head, ListNode tail) {
-        ListNode fast = head;
-        ListNode slow = head;
-        if (head == tail) return null;
-        while (fast != tail && fast.next != tail) {
-            fast = fast.next.next;
-            slow = slow.next;
-        }
-        TreeNode node = new TreeNode(slow.val);
-        node.left = toBST(head, slow);
-        node.right = toBST(slow.next, tail);
-        return node;
-    }
+    TreeNode thead = new TreeNode(slow.val);
+    thead.left = toBST(head,slow);
+    thead.right = toBST(slow.next,tail);
+    return thead;
 }
