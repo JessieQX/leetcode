@@ -28,6 +28,6 @@ public class Solution {
         
         int mid = start + (end - start) / 2;
         root = new TreeNode(inorder[mid]);
-        return root.left = build(root, inorder, 0, mid - 1) && root.right = build(root, inorder, mid + 1, end);
+        return root.left = build(root.left, inorder, 0, mid - 1) && root.right = build(root.right, inorder, mid + 1, end);
     }
 }
