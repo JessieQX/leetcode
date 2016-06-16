@@ -9,6 +9,8 @@
  */
 public class Solution {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
+        if (preorder == null || preorder.length == 0) return null;
+        if (inorder == null || inorder.length == 0) return null;
         TreeNode root = new TreeNode(preorder[0]);
         //int len = inorder.length;
         int rootIndex = 0;
@@ -30,6 +32,6 @@ public class Solution {
         root = new TreeNode(inorder[mid]);
         root.left = build(root.left, inorder, 0, mid - 1); 
         root.right = build(root.right, inorder, mid + 1, end);
-        return root;
+        //return root;
     }
 }
