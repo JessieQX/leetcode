@@ -11,11 +11,12 @@ public class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (root == null) return res;
-        List<Integer> level = new ArrayList<>();
+        
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
         boolean can = true;
         while (!stack.isEmpty()) {
+            List<Integer> level = new ArrayList<>();
             TreeNode node = stack.pop();
             level.add(node.val);
             if (can) {
@@ -25,16 +26,16 @@ public class Solution {
                 if (root.left != null) {
                     stack.push(root.left);
                 }
-                //can = !can;
-            // } else {
-            //     if (root.left != null) {
-            //         stack.push(root.left);
-            //     }
-            //     if (root.right != null) {
-            //         stack.push(root.right);
-            //     }
-            //     can = !can;
-             }
+                can = !can;
+            } else {
+                if (root.left != null) {
+                    stack.push(root.left);
+                }
+                if (root.right != null) {
+                    stack.push(root.right);
+                }
+                can = !can;
+            }
             res.add(level);
         }
         return res;
