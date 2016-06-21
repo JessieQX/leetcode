@@ -13,7 +13,7 @@ public class Solution {
         if (root == null) return res;
         List<Integer> level = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        stack.push(root.val);
+        stack.push(root);
         boolean can = true;
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
