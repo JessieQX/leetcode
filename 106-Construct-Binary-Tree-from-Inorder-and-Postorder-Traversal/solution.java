@@ -17,7 +17,7 @@ public class Solution {
             return null;
         }
         TreeNode root = new TreeNode(postorder[postStart]);
-        int index = start;
+        int index = 0;
         for (int i = start; i >= end; i--) {
             if (inorder[i] == root.val) {
                 index = i;
