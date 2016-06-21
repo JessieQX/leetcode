@@ -25,16 +25,16 @@ public class Solution {
                 if (root.left != null) {
                     stack.push(root.left);
                 }
-                can = !can;
-            } else {
-                if (root.left != null) {
-                    stack.push(root.left);
-                }
-                if (root.right != null) {
-                    stack.push(root.right);
-                }
-                can = !can;
-            }
+                //can = !can;
+            // } else {
+            //     if (root.left != null) {
+            //         stack.push(root.left);
+            //     }
+            //     if (root.right != null) {
+            //         stack.push(root.right);
+            //     }
+            //     can = !can;
+             }
             res.add(level);
         }
         return res;
