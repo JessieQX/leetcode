@@ -40,7 +40,7 @@ public class Solution {
 
         //return genTrees(1,n);
         List<TreeNode> list = new ArrayList<>();
-        list = helper(1, n);
+        list = genTrees(1, n);
         if (list.get(0) == null) {
             return new ArrayList<TreeNode>();
         } else {
