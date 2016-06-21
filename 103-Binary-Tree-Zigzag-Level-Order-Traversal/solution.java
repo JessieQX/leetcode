@@ -20,18 +20,18 @@ public class Solution {
             level.add(node.val);
             if (can) {
                 if (root.right != null) {
-                    stack.push(root.right.val);
+                    stack.push(root.right);
                 }
                 if (root.left != null) {
-                    stack.push(root.left.val);
+                    stack.push(root.left);
                 }
                 can = !can;
             } else {
                 if (root.left != null) {
-                    stack.push(root.left.val);
+                    stack.push(root.left);
                 }
                 if (root.right != null) {
-                    stack.push(root.right.val);
+                    stack.push(root.right);
                 }
                 can = !can;
             }
