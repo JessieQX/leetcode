@@ -12,19 +12,19 @@ public class Solution {
         int len = postorder.length;
         return build(inorder, postorder, 0, len - 1, len - 1);
     }
-    public TreeNode build(int[] inorder, int[] postorder, int start, int end, int mid) {
-        if (mid > inorder.length - 1 || start > end) {
+    public TreeNode build(int[] inorder, int[] postorder, int start, int end, int postStart) {
+        if (postStart < 0 || start > end) {
             return null;
         }
-        TreeNode root = new TreeNode(postorder[mid]);
+        TreeNode root = new TreeNode(postorder[postStart]);
         int index = 0;
         for (int i = start; i <= end; i++) {
             if (inorder[i] == root.val) {
                 index = i;
             }
         }
-        root.left = build(inorder, postorder, start, index - 1, mid - start + index - 1);
-        root.right = build(inorder, postorder, index + 1, end, mid - 1);
+        root.left = build(inorder, postorder, start, index - 1, postStart - start + index - 1);
+        root.right = build(inorder, postorder, index + 1, end, postStart - 1);
         return root;
     }
 }
