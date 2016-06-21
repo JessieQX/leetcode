@@ -23,7 +23,7 @@ public class Solution {
                 index = i;
             }
         }
-        root.left = build(inorder, postorder, start, index - 1, );
+        root.left = build(inorder, postorder, start, index - 1, mid - start + end - 1);
         root.right = build(inorder, postorder, index + 1, end, mid - 1);
         return root;
     }
