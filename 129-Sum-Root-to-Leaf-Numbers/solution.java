@@ -16,9 +16,9 @@ public class Solution {
         if (node.left == null && node.right == null) {
             return sum * 10 + node.val;
         }
-        int left = helper(node.left, sum * 10 + node.val);
-        int right = helper(node.right, sum * 10 + node.val);
-        //return helper(node.left, sum * 10 + node.val) + helper(node.right, sum * 10 + node.val);
-        return left + right;
+        // int left = helper(node.left, sum * 10 + node.val);
+        // int right = helper(node.right, sum * 10 + node.val);
+        //return left + right;
+        return helper(node.left, sum * 10 + node.val) + helper(node.right, sum * 10 + node.val);
     }
 }
