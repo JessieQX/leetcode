@@ -10,7 +10,7 @@
 public class Solution {
     public List<TreeNode> generateTrees(int n) {
         List<TreeNode> list = new ArrayList<>();
-        list = genTrees(1, n);
+        list = genTreeList(1, n);
         if (list.get(0) == null) {
             return new ArrayList<TreeNode>();
         } else {
