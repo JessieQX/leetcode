@@ -13,31 +13,26 @@ public class Solution {
         if (root == null) return res;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        boolean can = false;
+        boolean can = true;
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<>();
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                level.add(node.val);
                 if (can) {
-                    if (node.left != null) {
-                        queue.offer(node.left);
-                    }
-                    if (node.right != null) {
-                        queue.offer(node.right);
-                    }
-                    can = !can;
+                    level.add(node.val);
                 } else {
-                    if (node.right != null) {
-                        queue.offer(node.right);
-                    }
-                    if (root.left != null) {
-                        queue.offer(node.left);
-                    }
-                    can = !can;
+                    level.add(0, node.val);
                 }
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+                
             }
+            can = !can;
             res.add(level);
         }
         return res;
