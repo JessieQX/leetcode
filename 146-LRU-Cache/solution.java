@@ -14,7 +14,7 @@ public class LRUCache {
         head.post.pre = node;
         head.post = node;
     }
-    private void removeNode(DLinedList node) {
+    private void removeNode(DLinkedList node) {
         DLinkedList preNode = node.pre;
         DLinkedList postNode = node.post;
         preNode.post = postNode;
