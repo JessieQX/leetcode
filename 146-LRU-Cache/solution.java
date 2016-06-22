@@ -31,7 +31,7 @@ public class LRUCache {
     }
     
     //private Hashtable<Integer, DLinkedList> cache = new Hashtable<>();
-    private Hashtable<Integer, DLinkedList> cache = new Hashtable<Integer, DLinkedList>();
+    private HashMap<Integer, DLinkedList> cache = new HashMap<Integer, DLinkedList>();
     private int capacity;
     private int count;
     private DLinkedList head, tail;
