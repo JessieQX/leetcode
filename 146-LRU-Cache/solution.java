@@ -30,7 +30,7 @@ public class LRUCache {
         return node;
     }
     
-    private HashTable<Integer, DLinkedList> cache = new HashTable<>();
+    private Hashtable<Integer, DLinkedList> cache = new Hashtable<>();
     private int capacity;
     private int count;
     private DLinkedList head, tail;
