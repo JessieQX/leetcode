@@ -39,9 +39,9 @@ public class LRUCache {
         this.capacity = capacity;
         this.count = 0;
         head = new DLinkedList();
-        head = null;
+        head.pre = null;
         tail = new DLinkedList();
-        tail = null;
+        tail.post = null;
         head.post = tail;
         tail.pre = head;
     }
