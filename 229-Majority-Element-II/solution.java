@@ -1,7 +1,7 @@
 public class Solution {
     public List<Integer> majorityElement(int[] nums) {
         List<Integer> list = new ArrayList<>();
-        if (nums = null || nums.length == 0) {
+        if (nums == null || nums.length == 0) {
             return list;
         }
         int n = nums.length;
