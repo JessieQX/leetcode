@@ -7,7 +7,7 @@ public class Solution {
         int major = nums[0];
         int counter = 1;
         while (i < n) {
-            if (major = nums[j++]) {
+            if (major == nums[j++]) {
                 count++;
             }
             if (j >= n && count < n / 3) {
