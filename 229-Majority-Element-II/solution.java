@@ -10,14 +10,15 @@ public class Solution {
         int count = 1;
         while (i < n) {
             int major = nums[i];
-            if (major == nums[j++]) {
-                count++;
-            }
             if (j >= n && count < n / 3) {
                 i = i + 1;
                 j = i + 1;
                 count = 1;
             }
+            if (major == nums[j++]) {
+                count++;
+            }
+            
             if (j < n && count >= n / 3) {
                 list.add(major);
                 i = i + 1;
