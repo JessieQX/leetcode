@@ -5,7 +5,7 @@ public class Solution {
         int i = 1;
         int j = 2;
         int major = nums[0];
-        int counter = 1;
+        int count = 1;
         while (i < n) {
             if (major == nums[j++]) {
                 count++;
