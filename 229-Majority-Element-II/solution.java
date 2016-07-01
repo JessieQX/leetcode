@@ -21,7 +21,8 @@ public class Solution {
                 count2 = count2 - 1;
             }
         }
-        int count1 = 0, count2 = 0;
+        count1 = 0; 
+        count2 = 0;
         for (int n : nums) {
             if (m1 == n) {
                 count1++;
@@ -29,10 +30,10 @@ public class Solution {
                 count2++;
             }
         }
-        if (count1 >= nums.length / 3) {
+        if (count1 > nums.length / 3) {
             list.add(m1);
         }
-        if (count2 >= nums.length / 3) {
+        if (count2 > nums.length / 3) {
             list.add(m2);
         }
         return list;
