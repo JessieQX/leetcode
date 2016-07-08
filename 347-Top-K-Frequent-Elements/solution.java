@@ -7,7 +7,7 @@ public class Solution {
         PriorityQueue<Map.Entry<Integer, Integer>> queue = 
         new PriorityQueue<Map.Entry<Integer, Integer>>(map.size(), (o1, o2) -> o2.getValue() - o1.getValue());
         for (int i = 0; i < k; i++) {
-            queue.add(map.entrySet());
+            queue.offer(map.entrySet());
         }
         //queue.addAll(map.entrySet());
         List<Integer> res = new ArrayList<Integer>();
