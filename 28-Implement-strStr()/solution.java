@@ -11,7 +11,7 @@ public class Solution {
         int len1 = needle.length();
         int len2 = haystack.length();
         int start = 0;
-        while (start < (len2 - len1)) {
+        while (start <= (len2 - len1)) {
             int i = start;
             for (int j = 0; j < len1; j++) {
                 Character c1 = needle.charAt(i);
