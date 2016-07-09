@@ -9,7 +9,7 @@ public class Solution {
                 nums[i] = nums[low];
                 nums[low] = temp;
                 low++;
-                //i++;
+                i++;
             } else if (nums[i] == 2) {
                 int temp = nums[i];
                 nums[i] = nums[high];
