@@ -14,7 +14,7 @@ public class Solution {
         while (start <= (len2 - len1)) {
             int i = start;
             for (int j = 0; j < len1; j++) {
-                Character c1 = needle.charAt(i);
+                Character c1 = needle.charAt(j);
                 Character c2 = haystack.charAt(i);
                 if (c1 != c2) {
                     start++;
