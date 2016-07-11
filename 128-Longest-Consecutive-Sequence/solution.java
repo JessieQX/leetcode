@@ -2,7 +2,7 @@ public class Solution {
     public int longestConsecutive(int[] nums) {
         int res = 0;
         if (nums == null || nums.length == 0 ) {
-            return false;
+            return -1;
         }
         Map<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
