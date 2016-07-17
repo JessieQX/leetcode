@@ -23,6 +23,7 @@ public class Solution {
         int left = maxDepth(root.left);
         int right = maxDepth(root.right);
         if (left == -1 || right == -1 || Math.abs(left - right) > 1) {
+            //如果有一个分叉出现了>1的情况，那那个sub-root就是－1，它之后的每个点都是－1
             return -1;
         }
         return Math.max(left, right) + 1;
