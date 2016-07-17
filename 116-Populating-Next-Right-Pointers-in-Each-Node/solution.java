@@ -11,10 +11,14 @@ public class Solution {
         if (root == null) return;
         Queue<TreeLinkNode> queue = new LinkedList<>();
         queue.offer(root);
-        root.next = null;
+        
+        //root.next = null;
         while (!queue.isEmpty()) {
-            for (int i = 0; i < queue.size(); i++) {
-                TreeLinkedNode head = queue.poll();
+            int size = queue.size();
+            Queue<TreeLinkNode> level = new LinkedList<>();
+            for (int i = 0; i < size; i++) {
+                TreeLinkNode head = queue.poll();
+                level.offer(head);
                 if (head.left != null) {
                     queue.offer(head.left);
                 }
@@ -22,12 +26,14 @@ public class Solution {
                     queue.offer(head.right);
                 }
             }
-            for (int i = 0; i < queue.size(); i++) {
-                TreeLinkedNode head = queue.poll();
-                if (!queue.isEmpty()) {
-                    head.next = queue.peek();
+            
+            int size1 = level.size();
+            for (int i = 0; i < size1; i++) {
+                TreeLinkNode node = level.poll();
+                if (!level.isEmpty()) {
+                    node.next = level.peek();
                 } else {
-                    head.next = null;
+                    node.next = null;
                 }
             }
         }
