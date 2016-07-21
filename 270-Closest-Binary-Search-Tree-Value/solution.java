@@ -13,9 +13,9 @@ public class Solution {
             return target;
         }
         if (root.val < target) {
-            int less = closestValue(root.right, target);
+            double less = closestValue(root.right, target);
         } else {
-            int more = closestValue(root.left, target);
+            double more = closestValue(root.left, target);
         }
         if ((target - less) < (more - target)) {
             return less;
