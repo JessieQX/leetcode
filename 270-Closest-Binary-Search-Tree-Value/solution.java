@@ -12,10 +12,11 @@ public class Solution {
         if (root.val == target) {
             return root.val;
         }
+        int less = -1, more = -1;
         if (root.val < target) {
-            int less = closestValue(root.right, target);
+            less = closestValue(root.right, target);
         } else {
-            int more = closestValue(root.left, target);
+            more = closestValue(root.left, target);
         }
         if ((target - less) < (more - target)) {
             return less;
