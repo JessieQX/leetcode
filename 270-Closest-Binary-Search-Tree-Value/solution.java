@@ -10,12 +10,12 @@
 public class Solution {
     public int closestValue(TreeNode root, double target) {
         if (root.val == target) {
-            return target;
+            return root.val;
         }
         if (root.val < target) {
-            double less = closestValue(root.right, target);
+            int less = closestValue(root.right, target);
         } else {
-            double more = closestValue(root.left, target);
+            int more = closestValue(root.left, target);
         }
         if ((target - less) < (more - target)) {
             return less;
