@@ -17,6 +17,10 @@ public class Solution {
         } else {
             int more = closestValue(root.left, target);
         }
-        return (target - less) < (more - target) : less ? more;
+        if ((target - less) < (more - target)) {
+            return less;
+        } else {
+            return more;
+        }
     }
 }
