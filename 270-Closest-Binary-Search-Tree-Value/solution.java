@@ -9,19 +9,13 @@
  */
 public class Solution {
     public int closestValue(TreeNode root, double target) {
-        if (root == null) {
-            return 0;
+        int res = root.val;
+        while (root != null) {
+            if (Math.abs(target - root.val) < Math.abs(target - res)) {
+                res = root.val;
+            }
+            root = root.val < target ? root.right : root.left; 
         }
-        
-        if (root.val < target) {
-            int less = closestValue(root.right, target);
-        } else {
-            int more = closestValue(root.left, target);
-        }
-        if ((target - less) < (more - target)) {
-            return less;
-        } else {
-            return more;
-        }
+        return res;
     }
 }
