@@ -21,6 +21,7 @@ public class Solution {
             res.add(new ArrayList<>());//if the height is two, the res should have two sub-list. So we should create new space
         }
         res.get(height).add(node.val);
+        //node.left = node.right = null
         return height;
     }
 }
