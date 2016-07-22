@@ -9,7 +9,7 @@ public class Logger {
         If this method returns false, the message will not be printed.
         The timestamp is in seconds granularity. */
     public boolean shouldPrintMessage(int timestamp, String message) {
-        if (timestamp < map.getOrDefault(message)) {
+        if (timestamp < map.getOrDefault(message, 0)) {
             return false;
         }
         map.put(message, timestamp + 10);
