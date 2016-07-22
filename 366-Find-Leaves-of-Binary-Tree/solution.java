@@ -17,6 +17,9 @@ public class Solution {
     private int helper(TreeNode node) {
         if (node == null) return -1;
         int height = 1 + Math.max(helper(node.left), helper(node.right));
+        if (res.size() < height + 1) {
+            res.add(new ArrayList<>());
+        }
         res.get(height).add(node.val);
         return height;
     }
