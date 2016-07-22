@@ -22,7 +22,7 @@ public class Solution {
     private int helper(List<NestedInteger> list, int depth) {
         int res = 0;
         for (NestedInteger element : list) {
-            res += element.isInteger() ? element.getInteger() * depth : helper(list, depth + 1);
+            res += element.isInteger() ? element.getInteger() * depth : helper(element.getList(), depth + 1);
         }
         return res;
     }
