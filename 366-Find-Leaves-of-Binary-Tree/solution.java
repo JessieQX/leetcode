@@ -18,7 +18,7 @@ public class Solution {
         if (node == null) return -1;
         int height = 1 + Math.max(helper(node.left), helper(node.right));
         if (res.size() < height + 1) {
-            res.add(new ArrayList<>());
+            res.add(new ArrayList<>());//if the height is two, the res should have two sub-list. So we should create new space
         }
         res.get(height).add(node.val);
         return height;
