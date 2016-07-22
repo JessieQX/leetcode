@@ -1,5 +1,5 @@
 public class Logger {
-    Map<Integer, String> map;
+    Map<String, Integer> map;
     /** Initialize your data structure here. */
     public Logger() {
         map = new HashMap<>();
