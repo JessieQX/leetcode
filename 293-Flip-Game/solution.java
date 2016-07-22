@@ -2,12 +2,9 @@ public class Solution {
     public List<String> generatePossibleNextMoves(String s) {
         List<String> res = new ArrayList<>();
         for (int i = 1; i < s.length(); i++) {
-            String ss = new String(s);
-            if (ss.charAt(i - 1) == ss.charAt(i) && ss.charAt(i) == '+') {
-                ss.charAt(i - 1) = '-';
-                ss.charAt(i) = '-';
-                res.add(ss);
-                continue;
+            
+            if (s.charAt(i - 1) == '+' && s.charAt(i) == '+') {
+                res.add(s.substring(0, i - 1) + "--" + s.substring(i + 1, s.length()));
             }
         }
         return res;
