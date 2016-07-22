@@ -22,7 +22,7 @@ public class Solution {
             count = 1;
         }
         max = Math.max(count, max);
-        helper(root.left, count, root.left.val);
-        helper(root.right, count, root.right.val);
+        helper(root.left, count, root.val + 1);
+        helper(root.right, count, root.val + 1);
     }
 }
