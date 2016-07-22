@@ -16,7 +16,7 @@ public class Solution {
         UndirectedGraphNode clone = new UndirectedGraphNode(node.label);
         map.put(node.label, clone);
         for (UndirectedGraphNode neighbor : node.neighbors) {
-            clone.neighbors.add(clone(neighbor));
+            clone.neighbors.add(cloneGraph(neighbor));
         }
         return clone;
     }
