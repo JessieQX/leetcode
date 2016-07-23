@@ -6,7 +6,7 @@ public class Solution {
             int shift = str.charAt(0) - 'a';
             String key = "";
             for (int i = 0; i < str.length(); i++) {
-                char c = str.charAt(i) - shift;
+                char c = (char)(str.charAt(i) - shift);
                 if (c < 'a') {
                     c += 26;
                 }
