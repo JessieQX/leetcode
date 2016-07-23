@@ -6,7 +6,7 @@ public class Solution {
         map.put('1', '1');
         map.put('8', '8');
         map.put('0', '0');
-        int i = 0, j = num.length - 1;
+        int i = 0, j = num.length() - 1;
         while (i <= j) {
             if (!map.containsKey(num.charAt(i))) {
                 return false;
