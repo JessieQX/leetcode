@@ -1,17 +1,21 @@
 public class TwoSum {
     Map<Integer, Integer> map = new HashMap<>();
-    int count = 0;
+    
     // Add the number to an internal data structure.
 	public void add(int number) {
-	    count++;
-	    map.put(count, number);
+	    if (map.containsKey(number)) {
+	        map.put(number, map.get(number) + 1);
+	    } else {
+	        map.put(number, 1);
+	    }
 	}
 
     // Find if there exists any pair of numbers which sum is equal to the value.
 	public boolean find(int value) {
-	    for (int i = 0; i < count; i++) {
-	        int value1 = map.get(i);
-	        if (map.containsValue(value - value1)) {
+	    for (Map.Entry<Integer, Integer> entry : Map.entrySet()) {
+	        int i = entry.getKey();
+	        int j = value - i;
+	        if (i == j && entry.getValue() > 1 || i != j && map.containsKey(j)) {
 	            return true;
 	        }
 	    }
