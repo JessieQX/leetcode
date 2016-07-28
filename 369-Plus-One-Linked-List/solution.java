@@ -35,6 +35,6 @@ public class Solution {
         while (newPointer.next != pointer) {
             newPointer = newPointer.next;
         }
-        helper(newPointer, head);
+        helper(newPointer, head, dummy);
     }
 }
