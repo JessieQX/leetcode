@@ -9,13 +9,17 @@
 public class Solution {
     public ListNode plusOne(ListNode head) {
         ListNode pointer = head;
+        ListNode dummy = new ListNode(0);
         while (pointer.next != null) {
             pointer = pointer.next;
         }
-        helper(pointer, head);
+        helper(pointer, head, dummy);
+        if (dummy.val == 1) {
+            return dummy;
+        }
         return head;
     }
-    private void helper(ListNode pointer, ListNode head) {
+    private void helper(ListNode pointer, ListNode head, ListNode dummy) {
         if (pointer.val < 9) {
             pointer.val = pointer.val + 1;
             return; 
@@ -24,9 +28,6 @@ public class Solution {
         ListNode newPointer = null;
         
         if (pointer == head) {
-            ListNode dummy = null;
-            dummy.next = head;
-            dummy.val = 0;
             newPointer = dummy;
         } else {
             newPointer = head;
@@ -34,7 +35,6 @@ public class Solution {
         while (newPointer.next != pointer) {
             newPointer = newPointer.next;
         }
-        //newPointer.val = newPointer.val + 1;
         helper(newPointer, head);
     }
 }
