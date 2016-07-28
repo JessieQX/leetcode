@@ -22,11 +22,12 @@ public class Solution {
         }
         pointer.val = 0;
         ListNode newPointer = null;
+        
         if (pointer == head) {
             ListNode dummy = null;
             dummy.next = head;
-            head = dummy;
-            newPointer = head;
+            dummy.val = 0;
+            newPointer = dummy;
         } else {
             newPointer = head;
         }
