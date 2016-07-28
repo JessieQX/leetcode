@@ -9,7 +9,7 @@
 public class Solution {
     public ListNode plusOne(ListNode head) {
         ListNode pointer = head;
-        ListNode dummy = null;
+        ListNode dummy = new ListNode(0);
         while (pointer.next != null) {
             pointer = pointer.next;
         }
@@ -28,7 +28,7 @@ public class Solution {
         ListNode newPointer = null;
         
         if (pointer == head) {
-            dummy = new ListNode(0);
+            // dummy = new ListNode(0);
             dummy.next = head;
             newPointer = dummy;
         } else {
