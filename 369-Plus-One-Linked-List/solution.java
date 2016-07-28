@@ -25,7 +25,8 @@ public class Solution {
         if (pointer == head) {
             ListNode dummy = null;
             dummy.next = head;
-            newPointer = dummy;
+            head = dummy;
+            newPointer = head;
         } else {
             newPointer = head;
         }
