@@ -21,12 +21,13 @@ public class Solution {
             return; 
         }
         pointer.val = 0;
+        ListNode newPointer = null;
         if (pointer == head) {
             ListNode dummy = null;
             dummy.next = head;
-            ListNode newPointer = dummy;
+            newPointer = dummy;
         } else {
-            ListNode newPointer = head;
+            newPointer = head;
         }
         while (newPointer.next != pointer) {
             newPointer = newPointer.next;
