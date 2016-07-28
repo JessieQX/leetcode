@@ -28,7 +28,6 @@ public class Solution {
         ListNode newPointer = null;
         
         if (pointer == head) {
-            // dummy = new ListNode(0);
             dummy.next = head;
             newPointer = dummy;
         } else {
