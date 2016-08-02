@@ -12,7 +12,6 @@ public class Solution {
             if (!map.containsKey(target - numbers[i])) {
                 map.put(numbers[i], i);
             } else {
-                map.put()
                 res[0] = i;
                 res[1] = map.get(numbers[i]);
             }
