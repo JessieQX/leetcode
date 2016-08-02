@@ -4,7 +4,7 @@ public class Solution {
         if (numbers == null || numbers.length == 0) {
             return res;
         }
-        if (numbers[0] >= target) {
+        if (numbers[0] > target) {
             return res;
         }
         Map<Integer, Integer> map = new HashMap<>();
@@ -12,8 +12,8 @@ public class Solution {
             if (!map.containsKey(target - numbers[i])) {
                 map.put(numbers[i], i);
             } else {
-                res[0] = i;
-                res[1] = map.get(numbers[i]);
+                res[0] = map.get(target - numbers[i]) + 1;
+                res[1] = i + 1;
             }
         }
         return res;
