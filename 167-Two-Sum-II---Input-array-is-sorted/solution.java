@@ -9,8 +9,8 @@ public class Solution {
         }
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < numbers.length; i++) {
-            if (!map.containsKey(target - numbers[i])) {
-                map.put(numbers[i], i);
+            if (!map.containsKey(numbers[i])) {
+                map.put(target - numbers[i], i);
             } else {
                 res[0] = map.get(target- numbers[i]);
                 res[1] = map.get(numbers[i]);
