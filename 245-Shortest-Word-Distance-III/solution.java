@@ -13,8 +13,8 @@ public class Solution {
                 index2.add(i);
             }
         }
-        for (int i = 0; i < index1.length(); i++) {
-            for (int j = 0; j < index2.length(); j++) {
+        for (int i : index1) {
+            for (int j : index2) {
                 if (i == j) {
                     continue;
                 } else {
