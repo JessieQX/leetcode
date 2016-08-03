@@ -23,32 +23,32 @@ public class Solution {
         //     }
         // }
         // return distance;
-        // int distance = Integer.MAX_VALUE;
-        // int start = distance, end = -distance;
-        // for (int i = 0; i < words.length; i++) {
-        //     if (words[i].equals(word1)) {
-        //         start = i;
-        //     }
-        //     if (words[i].equals(word2)) {
-        //         if (word1.equals(word2)) {
-        //             start = end;
-        //         }
-        //         end = i;
-        //     }
-        //     distance = Math.min(distance, Math.abs(start - end));
-        // }
-        // return (int)distance;
-        long dist = Integer.MAX_VALUE, i1 = dist, i2 = -dist;
-    for (int i=0; i<words.length; i++) {
-        if (words[i].equals(word1))
-            i1 = i;
-        if (words[i].equals(word2)) {
-            if (word1.equals(word2))
-                i1 = i2;
-            i2 = i;
+        long distance = Integer.MAX_VALUE;
+        long start = distance, end = -distance;
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].equals(word1)) {
+                start = i;
+            }
+            if (words[i].equals(word2)) {
+                if (word1.equals(word2)) {
+                    start = end;
+                }
+                end = i;
+            }
+            distance = Math.min(distance, Math.abs(start - end));
         }
-        dist = Math.min(dist, Math.abs(i1 - i2));
-    }
-    return (int) dist;
+        return (int)distance;
+    //     long dist = Integer.MAX_VALUE, i1 = dist, i2 = -dist;
+    // for (int i=0; i<words.length; i++) {
+    //     if (words[i].equals(word1))
+    //         i1 = i;
+    //     if (words[i].equals(word2)) {
+    //         if (word1.equals(word2))
+    //             i1 = i2;
+    //         i2 = i;
+    //     }
+    //     dist = Math.min(dist, Math.abs(i1 - i2));
+    // }
+    // return (int) dist;
     }
 }
