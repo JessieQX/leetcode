@@ -4,7 +4,12 @@ public class Solution {
         int colB = B[0].length;
         int M = A[0].length;
         int[][] AB = new int[rowA][colB];
-        
+        // for (int i = 0; i < rowA; i++) {
+        //     for (int j = 0; j < colB; j++) {
+        //         AB[i][j] = 0;
+        //     }
+        // }
+        //int k = 0;
         for (int i = 0; i < rowA; i++) {
             for (int j = 0; j < colB; j++) {
                 for (int k = 0; k < M; k++) {
