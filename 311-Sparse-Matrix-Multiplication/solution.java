@@ -5,7 +5,7 @@ public class Solution {
         int M = A[0].length;
         int[][] AB = new int[rowA][colB];
         for (int i = 0; i < rowA; i++) {
-            for (int j = 0; i < colB; j++) {
+            for (int j = 0; j < colB; j++) {
                 AB[i][j] = 0;
             }
         }
@@ -14,7 +14,8 @@ public class Solution {
             for (int j = 0; j < colB; j++) {
                 int k = 0;
                 while (k < M) {
-                    AB[i][j] += A[i][k++] * B[k++][j];
+                    AB[i][j] += A[i][k] * B[k][j];
+                    k++;
                 }
             }
         }
