@@ -3,7 +3,7 @@ public class Solution {
         int rowA = A.length;
         int colB = B[0].length;
         int M = A[0].length;
-        int[][] AB = new int[rowA - 1][colB - 1];
+        int[][] AB = new int[rowA][colB];
         for (int i = 0; i < rowA; i++) {
             for (int j = 0; i < colB; j++) {
                 AB[i][j] = 0;
