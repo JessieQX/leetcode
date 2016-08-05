@@ -11,13 +11,12 @@ public class Solution {
     }
     private int helper(String s, int start, int count) {
         if (start == s.length() - 1) {
-            return;
+            return count;
         }
         for (int i = start; i < s.length(); i++) {
             if (s.charAt(i - 1) == '+' && s.charAt(i) == '+') {
                 helper(s.substring(0, i - 1) + "--" + s.substring(i + 1, s.length()), start + 1, count + 1);
             }
         }
-        return count;
     }
 }
