@@ -18,6 +18,6 @@ public class Solution {
                 end--;
             }
         }
-        return true
+        return true;
     }
 }
