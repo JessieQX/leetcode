@@ -16,8 +16,8 @@ public class Solution {
         root.left.left = root.right;
         root.left.right = root;
         
-        root.left == null;
-        root.right == null;
+        root.left = null;
+        root.right = null;
         return newRoot;
     }
 }
