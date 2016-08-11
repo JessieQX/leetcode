@@ -19,7 +19,7 @@ public class Solution {
                 continue;
             }
             swap(nums, start, i);
-            permuteHelper(res, Arrays.copyof(nums, nums.length), start + 1);
+            permuteHelper(res, Arrays.copyOf(nums, nums.length), start + 1);
         }
     }
     private void swap(int[] nums, int i, int j) {
