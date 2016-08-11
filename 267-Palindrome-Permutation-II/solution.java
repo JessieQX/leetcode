@@ -16,8 +16,8 @@ public class Solution {
         }
         return res;
     }
-    private List<Integer> permuteUnique(char[] nums) {
-        List<Integer> res = new ArrayList<>();
+    private List<String> permuteUnique(char[] nums) {
+        List<String> res = new ArrayList<>();
         if (nums == null || nums.length == 0) {
             return res;
         }
@@ -27,7 +27,7 @@ public class Solution {
         permuteHelper(res, s, nums, visited);
         return res;
     }
-    private void permuteHelper(List<Integer> res, String s, char[] nums, boolean[] visited) {
+    private void permuteHelper(List<String> res, String s, char[] nums, boolean[] visited) {
         if (nums.length == s.length()) {
             res.add(new String(s));
             return;
