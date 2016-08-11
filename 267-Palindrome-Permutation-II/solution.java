@@ -6,11 +6,10 @@ public class Solution {
         char[] nums = new char[c.length / 2];
         Set<Character> set = new HashSet<>();
         for (int i = 0; i < c.length; i++) {
+            set.add(c[i]);
             if (!set.add(c[i])) {
                 nums[i] = c[i];
                 set.remove(c[i]);
-            } else {
-                set.add(c[i]);
             }
         }
         if (set.size() <= 1) {
