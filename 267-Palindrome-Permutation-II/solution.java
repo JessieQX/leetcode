@@ -9,6 +9,8 @@ public class Solution {
             if (!set.add(c[i])) {
                 nums[i] = c[i];
                 set.remove(c[i]);
+            } else {
+                set.add(c[i]);
             }
         }
         if (set.size() <= 1) {
