@@ -37,7 +37,7 @@ public class Solution {
             visited[i] = true;
             //list.add(nums[i]);
             s += nums[i];
-            permuteHelper(res, list, nums, visited);
+            permuteHelper(res, s, nums, visited);
             visited[i] = false;
             s = s.substring(0, s.length() - 1);
             while (i < nums.length - 1 && nums[i] == nums[i + 1]) {
