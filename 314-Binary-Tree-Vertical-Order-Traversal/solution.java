@@ -16,7 +16,7 @@ public class Solution {
         queue.offer(root);
         cols.offer(0);
         int min = 0, max = 0;
-        while (!q.isEmpty()) {
+        while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
             int col = cols.poll();
             if (!map.containsKey(col)) {
