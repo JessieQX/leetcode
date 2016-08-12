@@ -10,7 +10,7 @@
 public class Solution {
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
-        Map<Integer, List<Integer>> map = new HashMap<>();
+        Map<Integer, ArrayList<Integer>> map = new HashMap<>();
         Queue<TreeNode> queue = new LinkedList<>();
         Queue<Integer> cols = new LinkedList<>();
         queue.offer(root);
