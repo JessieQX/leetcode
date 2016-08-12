@@ -20,7 +20,7 @@ public class Solution {
             TreeNode node = queue.poll();
             int col = cols.poll();
             if (!map.containsKey(col)) {
-                map.put(col, new ArrayList<>());
+                map.put(col, new ArrayList<Integer>());
             }
             map.get(col).add(node.val);
             if (node.left != null) {
