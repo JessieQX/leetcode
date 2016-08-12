@@ -13,10 +13,10 @@ public class Solution {
             res.add(new ArrayList<>(list));
             return;
         }
-        for (int i = start; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (list.contains(nums[i])) continue;
             list.add(nums[i]);
-            permuteHelper(nums, res, list, start + 1);
+            permuteHelper(nums, res, list);
             list.remove(list.size() - 1);
         }
     }
