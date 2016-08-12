@@ -1,6 +1,6 @@
 public class Solution {
     public List<List<Integer>> permuteUnique(int[] nums) {
-        List<List<Integer> res = new ArrayList<>();
+        List<List<Integer>> res = new ArrayList<>();
         if (nums == null || nums.length == 0) return res;
         List<Integer> list = new ArrayList<>();
         boolean[] visited = new boolean[nums.length];
