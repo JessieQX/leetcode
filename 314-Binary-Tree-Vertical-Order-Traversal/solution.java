@@ -13,7 +13,7 @@ public class Solution {
         Map<Integer, List<Integer>> map = new HashMap<>();
         Queue<TreeNode> queue = new LinkedList<>();
         Queue<Integer> cols = new LinkedList<>();
-        queue.push(q);
+        queue.push(root);
         queue.push(0);
         int min = 0, max = 0;
         while (!q.isEmpty()) {
