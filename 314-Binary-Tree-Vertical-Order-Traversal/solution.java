@@ -13,8 +13,8 @@ public class Solution {
         Map<Integer, List<Integer>> map = new HashMap<>();
         Queue<TreeNode> queue = new LinkedList<>();
         Queue<Integer> cols = new LinkedList<>();
-        queue.push(root);
-        queue.push(0);
+        queue.offer(root);
+        cols.offer(0);
         int min = 0, max = 0;
         while (!q.isEmpty()) {
             TreeNode node = queue.poll();
@@ -24,13 +24,13 @@ public class Solution {
             }
             map.get(col).add(node.val);
             if (node.left != null) {
-                queue.push(node.left);
-                cols.push(col - 1);
+                queue.offer(node.left);
+                cols.offer(col - 1);
                 if (col <= min) min = col - 1;
             }
             if (node.right != null) {
-                queue.push(node.right);
-                cols.push(col + 1);
+                queue.offer(node.right);
+                cols.offer(col + 1);
                 if (col >= max) max = col + 1;
             }
         }
