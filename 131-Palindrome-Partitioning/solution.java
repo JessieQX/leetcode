@@ -1,6 +1,6 @@
 public class Solution {
     public List<List<String>> partition(String s) {
-        List<List<String> res = new ArrayList<>();
+        List<List<String>> res = new ArrayList<>();
         List<String> list = new ArrayList<>();
         helper(s, res, list, 0);
         return res;
