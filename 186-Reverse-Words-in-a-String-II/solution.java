@@ -2,10 +2,10 @@ public class Solution {
     public void reverseWords(char[] s) {
         int i = 0, j = s.length - 1;
         while (i < j) {
-            if (i < j && s[i] == " ") {
+            if (i < j && s[i] == ' ') {
                 i++;
             }
-            if (i < j && s[j] == " ") {
+            if (i < j && s[j] == ' ') {
                 j--;
             }
             swap(s, s[i], s[j]);
