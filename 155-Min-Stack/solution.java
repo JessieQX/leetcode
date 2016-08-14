@@ -20,7 +20,7 @@ public class MinStack {
         if (stack.peek().equals(min.peek())) {
 			min.pop();
 		}
-		return stack.pop();
+		stack.pop();
     }
     
     public int top() {
