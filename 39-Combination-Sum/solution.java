@@ -9,7 +9,7 @@ public class Solution {
             res.add(new ArrayList<>(list));
             return;
         } else if (target > 0) {
-            for (int i = start; i < candidates.length && nums[i] <= target; i++) {
+            for (int i = start; i < candidates.length && candidates[i] <= target; i++) {
                 if (i > start && candidates[i] == candidates[i - 1]) continue;
                 list.add(candidates[i]);
                 helper(candidates, res, list, target - nums[i], i);
