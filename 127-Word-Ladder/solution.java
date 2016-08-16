@@ -39,7 +39,9 @@ public class Solution {
         return list;
     }
     private String replace(String word, int i, char c) {
-        word.charAt(i) = c;
-        return new String(word);
+        char[] chars = word.toCharArray();
+        chars[i] = c;
+        //word.charAt(i) = c;
+        return new String(chars);
     }
 }
