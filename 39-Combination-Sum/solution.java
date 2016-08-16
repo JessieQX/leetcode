@@ -12,7 +12,7 @@ public class Solution {
             for (int i = start; i < candidates.length && candidates[i] <= target; i++) {
                 if (i > start && candidates[i] == candidates[i - 1]) continue;
                 list.add(candidates[i]);
-                helper(candidates, res, list, target - nums[i], i);
+                helper(candidates, res, list, target - candidates[i], i);
                 list.remove(list.size() - 1);
             }
         }
