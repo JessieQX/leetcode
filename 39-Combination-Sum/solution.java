@@ -3,6 +3,7 @@ public class Solution {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);
         helper(candidates, res, new ArrayList<>(), target, 0);
+        return res;
     }
     private void helper(int[] candidates, List<List<Integer>> res, List<Integer> list, int target, int start) {
         if (target == 0) {
