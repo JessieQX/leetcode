@@ -1,6 +1,8 @@
 public class Solution {
     public List<List<String>> partition(String s) {
         List<List<String>> res = new ArrayList<>();
+        helper(s, res, new ArrayList<>(), 0);
+        return res;
     }
     private void helper(String s, List<List<String>> res, List<String> list, int start) {
         if (start == s.length()) {
