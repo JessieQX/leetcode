@@ -12,9 +12,10 @@ public class Solution {
         for (int i = start; i < s.length(); i++) {
             if (wordDict.contains(s.substring(start, i + 1))) {
                 str += s.substring(start, i + 1) + " ";
+                helper(s, wordDict, res, str, i + 1);
+                str -= (s.substring(start, i + 1) + " "); 
             }
-            helper(s, wordDict, res, str, i + 1);
-            str -= (s.substring(start, i + 1) + " "); 
+            
         }
     }
 }
