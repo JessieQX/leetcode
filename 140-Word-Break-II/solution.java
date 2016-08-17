@@ -5,8 +5,8 @@ public class Solution {
         return res;
     }
     private void helper(String s, Set<String> wordDict, List<String> res, String str, int start) {
-        if (s == null || s.length() == 0) {
-            res.add(new String(str));
+        if (start == s.length()) {
+            res.add(new String(str.substring(0, str.length() - 1)));
             return;
         }
         for (int i = start; i < s.length(); i++) {
