@@ -5,8 +5,8 @@ public class Solution {
         return isMatch(pattern, 0, str, 0, map, set);
     }
     private boolean isMatch(String pattern, int i, String str, int j, Map<Character, String> map, Set<String> set) {
-        if (i == pattern.length() && j = str.length()) return true;
-        if (i == pattern.length() || j = str.length()) return false;
+        if (i == pattern.length() && j == str.length()) return true;
+        if (i == pattern.length() || j == str.length()) return false;
         
         //get the current pattern character
         char c = pattern.charAt(i);
