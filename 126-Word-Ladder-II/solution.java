@@ -2,7 +2,7 @@ public class Solution {
     public List<List<String>> findLadders(String beginWord, String endWord, Set<String> wordList) {
         Map<String, List<String>> neighbors = new HashMap<>();
         Map<String, Integer> distance = new HashMap<>();
-        dict.add(end);
+        wordList.add(endWord);
         bfs(neighbors, distance, beginWord, endWord, wordList);
         List<List<String>> result = new ArrayList<>();
         dfs(neighbors, distance, endWord, beginWord, wordList, result, new LinkedList<>());
