@@ -5,7 +5,7 @@ public class Solution {
         can[0] = true;
         for (int i = 1; i <= s.length(); i++) {
             can[i] = false;
-            for (int j = 1; j <= i && j <= maxLength(wordDict); j++) {
+            for (int j = 1; j <= i ; j++) {
                 //if (!can[i - j]) continue;
                 if (can[i - j] && wordDict.contains(s.substring(i - j, i))) {
                     can[i] = true;
