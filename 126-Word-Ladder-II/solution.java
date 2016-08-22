@@ -43,4 +43,23 @@ public class Solution {
         }
         path.remove(0);
     }
+    private static List<String> getNeighbors(String word, Set<String> wordList) {
+        List<String> neighborList = new ArrayList<>();
+        for (int i = 0; i < word.length(); i++) {
+            for (char c = 'a'; c <= 'z'; c++) {
+                if (c == word.charAt(i)) continue;
+                String neighbor = replace(word, i, c);
+                if (wordList.contains(neighbor)) {
+                    neighborList.add(neighbor);
+                }
+            }
+        }
+        return neighborList;
+
+    }
+    private static String replace(String s, int i, char c) {
+        char[] chars = s.toCharArray();
+        chars[i] = c;
+        return new String(chars);
+    }
 }
