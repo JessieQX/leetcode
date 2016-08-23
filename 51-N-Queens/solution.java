@@ -1,11 +1,6 @@
 public class Solution {
-    public List<String[]> solveNQueens(int n) {
-        List<String[]> res = new ArrayList<>();
-        helper(0, new boolean[n], new boolean[2*n], new boolean[2*n], 
-            new String[n], res);
-        return res;
-    }
-    private void helper(int r, boolean[] cols, boolean[] d1, boolean[] d2, String[] board, List<String[]> res) {
+    private void helper(int r, boolean[] cols, boolean[] d1, boolean[] d2, 
+                        String[] board, List<String[]> res) {
         if (r == board.length) res.add(board.clone());
         else {
             for (int c = 0; c < board.length; c++) {
@@ -20,5 +15,12 @@ public class Solution {
                 }
             }
         }
+    }
+    
+    public List<String[]> solveNQueens(int n) {
+        List<String[]> res = new ArrayList<>();
+        helper(0, new boolean[n], new boolean[2*n], new boolean[2*n], 
+            new String[n], res);
+        return res;
     }
 }
