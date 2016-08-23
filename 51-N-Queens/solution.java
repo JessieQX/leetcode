@@ -1,26 +1,45 @@
 public class Solution {
-    private void helper(int r, boolean[] cols, boolean[] d1, boolean[] d2, 
-                        String[] board, List<String[]> res) {
-        if (r == board.length) res.add(board.clone());
-        else {
-            for (int c = 0; c < board.length; c++) {
-                int id1 = r - c + board.length, id2 = 2*board.length - r - c - 1;
-                if (!cols[c] && !d1[id1] && !d2[id2]) {
-                    char[] row = new char[board.length];
-                    Arrays.fill(row, '.'); row[c] = 'Q';
-                    board[r] = new String(row);
-                    cols[c] = true; d1[id1] = true; d2[id2] = true;
-                    helper(r+1, cols, d1, d2, board, res);
-                    cols[c] = false; d1[id1] = false; d2[id2] = false;
-                }
+    
+    public List<String[]> solveNQueens(int n) {
+        char[][] board = new char[n][n];
+        for(int i = 0; i < n; i++)
+            for(int j = 0; j < n; j++)
+                board[i][j] = '.';
+        List<List<String>> res = new ArrayList<List<String>>();
+        dfs(board, 0, res);
+        return res;
+    }
+    private void dfs(char[][] board, int colIndex, List<List<String>> res) {
+        if(colIndex == board.length) {
+            res.add(construct(board));
+            return;
+        }
+        
+        for(int i = 0; i < board.length; i++) {
+            if(validate(board, i, colIndex)) {
+                board[i][colIndex] = 'Q';
+                dfs(board, colIndex + 1, res);
+                board[i][colIndex] = '.';
             }
         }
     }
+    private boolean validate(char[][] board, int x, int y) {
+        for(int i = 0; i < board.length; i++) {
+            for(int j = 0; j < y; j++) {
+                if(board[i][j] == 'Q' && (x + j == y + i || x + y == i + j || x == i))
+                    return false;
+            }
+        }
+        
+        return true;
+    }
     
-    public List<String[]> solveNQueens(int n) {
-        List<String[]> res = new ArrayList<>();
-        helper(0, new boolean[n], new boolean[2*n], new boolean[2*n], 
-            new String[n], res);
+    private List<String> construct(char[][] board) {
+        List<String> res = new LinkedList<String>();
+        for(int i = 0; i < board.length; i++) {
+            String s = new String(board[i]);
+            res.add(s);
+        }
         return res;
     }
 }
