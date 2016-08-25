@@ -1,7 +1,7 @@
 public class Solution {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         List<String> res = new ArrayList<>();
-        if (lower > nums[0] || upper < nums[nums.length]) {
+        if (lower > nums[0] || upper < nums[nums.length - 1]) {
             return res;
         }
         if (lower + 1 < nums[0]) {
