@@ -1,9 +1,14 @@
 public class Solution {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         List<String> res = new ArrayList<>();
-        if (nums.length == 0 && lower < upper) {
-            res.add(lower + "->" + upper);
-            return res;
+        if (nums == null || nums.length == 0) {
+            if (lower == upper) {
+                res.add(lower);
+                return res;
+            } else if (lower < upper) {
+                res.add(lower + "->" + upper);
+                return res;
+            }
         }
         // if (lower > nums[0] || upper < nums[nums.length - 1]) {
         //     return res;
