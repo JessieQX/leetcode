@@ -9,7 +9,7 @@ public class Solution {
             res.add(curr);
         } else {
             helper(res, word, curr, pos + 1, count + 1);
-            helper(res, word, curr + count > 0 ? count : "", pos + 1, 0);
+            helper(res, word, curr + （count > 0 ? count : ""）, pos + 1, 0);
         }
     }
 }
