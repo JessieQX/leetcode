@@ -11,8 +11,8 @@ public class Solution {
             }
             res.add(curr);
         } else {
-            helper(res, word, curr, pos + 1, count + 1);
-            helper(res, word, curr + (count > 0 ? count : "") + word.charAt(pos), pos + 1, 0);
+            helper(res, word, curr, pos + 1, count + 1);//count the character that needs to be abbreviated
+            helper(res, word, curr + (count > 0 ? count : "") + word.charAt(pos), pos + 1, 0);//make the count into abbreviation and set the count 0.
         }
     }
 }
