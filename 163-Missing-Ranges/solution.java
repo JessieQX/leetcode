@@ -21,7 +21,7 @@ public class Solution {
                 if (nums[i] - nums[i - 1] == 1) {
                     continue;
                 } else if (nums[i] - nums[i - 1] == 2) {
-                    res.add(nums[i] - 1);
+                    res.add((nums[i] - 1) + "");
                 } else {
                     res.add((nums[i - 1] + 1) + "->" + (nums[i] - 1));
                 }
