@@ -6,7 +6,8 @@ public class Solution {
         Stack<String> stack = new Stack<>();
         int currPath = 0;
         int maxPath = 0;
-        String[] paths = input.split("\n");
+        String[] paths = input.split("\\n");
+        System.out.println(paths.length());
         for (String path : paths) {
             while (!stack.isEmpty() && numOfSpace(stack.peek()) >= numOfSpace(path)) {
                 currPath -= path.length();
@@ -15,13 +16,19 @@ public class Solution {
             currPath += (path.length() - numOfSpace(path) + 1);
             stack.push(path);
             if (isEnd(path)) {
-                maxPath = Math.max(maxPath, path);
+                maxPath = Math.max(maxPath, currPath);
             }
         }
         return maxPath;
     }
     private int numOfSpace(String path) {
-        return path.length() - path.trim().length();
+        int count = 0;
+        for (int i = 0; i < path.length(); i++) {
+            if (path.charAt(i) == '\\') {
+                count++;
+            }
+        }
+        return count;
     }
     private boolean isEnd(String path) {
         if (path.contains("\\.")) {
