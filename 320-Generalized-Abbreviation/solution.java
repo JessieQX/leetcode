@@ -7,6 +7,7 @@ public class Solution {
         if (pos == word.length()) {
             curr = curr + count;
             res.add(curr);
+            return res;
         } else {
             helper(res, word, curr, pos + 1, count + 1);
             helper(res, word, curr + (count > 0 ? count : ""), pos + 1, 0);
