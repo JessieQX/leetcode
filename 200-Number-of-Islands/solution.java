@@ -1,8 +1,9 @@
 public class Solution {
     public int numIslands(char[][] grid) {
+        if (grid.length == 0 || grid[0].length == 0) return 0;
         int m = grid.length;
         int n = grid[0].length;
-        if (m == 0 || n == 0) return -1;
+        
         int count = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
