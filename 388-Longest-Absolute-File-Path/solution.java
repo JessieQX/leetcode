@@ -12,7 +12,7 @@ public class Solution {
                 currPath -= path.length();
                 stack.pop();
             }
-            currPath += (path.length - numOfSpace(path) + 1);
+            currPath += (path.length() - numOfSpace(path) + 1);
             stack.push(path);
             if (isEnd(path)) {
                 maxPath = Math.max(maxPath, path);
