@@ -8,7 +8,7 @@ public class Solution {
             if (x == y) return false;
             nums[x] = y;
         }
-        return edge.length == n - 1;
+        return edges.length == n - 1;
     }
     private int findUnion(int[] nums, int i) {
         if (nums[i] == -1) {
