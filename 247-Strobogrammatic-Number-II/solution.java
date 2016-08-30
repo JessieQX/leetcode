@@ -1,6 +1,6 @@
 public class Solution {
     public List<String> findStrobogrammatic(int n) {
-        
+        return helper(n, n);
     }
     private List<String> helper(int n, int m) {
         if (n == 0) return new ArrayList<>(Arrays.asList(""));
