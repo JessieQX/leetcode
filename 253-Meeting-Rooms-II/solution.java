@@ -12,7 +12,7 @@ public class Solution {
         if (intervals == null || intervals.length == 0) {
             return 0;
         }
-        Arrays.sort((a, b) -> (a.start - b.start));
+        Arrays.sort(intervals, (a, b) -> (a.start - b.start));
         PriorityQueue<Interval> heap = new PriorityQueue<Interval>(intervals.length, (o1, o2) -> o1.end - o2.end);
         heap.offer(intervals[0]);
         for (int i = 1; i < intervals.length; i++) {
