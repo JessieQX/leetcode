@@ -1,6 +1,6 @@
 public class Solution {
     public boolean validTree(int n, int[][] edges) {
-        int[] nums = new nums[n];
+        int[] nums = new int[n];
         Arrays.fill(nums, -1);
         for (int[] edge : edges) {
             int x = findUnion(nums, edge[0]);
