@@ -9,7 +9,7 @@ public class Solution {
         int res = Integer.MAX_VALUE;
         for (int k = i; k <= j; k++) {
             int temp = k + Math.max(dp(f, i, k - 1), dp(f, k + 1, j));
-            int res = Math.min(temp, res);
+            res = Math.min(temp, res);
         }
         f[i][j] = res;
         return res;
