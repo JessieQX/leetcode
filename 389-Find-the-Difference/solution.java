@@ -34,6 +34,6 @@ public class Solution {
                 return c;
             }
         }
-        return 0;
+        return 0 + '';
     }
 }
