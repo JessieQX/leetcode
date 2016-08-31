@@ -7,7 +7,11 @@ public class Solution {
             can[i] = false;
             for (int j = 1; j <= i && j <= maxLength(wordDict); j++) {
                 //if (!can[i - j]) continue;
-                if (can[i - j] && wordDict.contains(s.substring(i - j, i))) {
+                // if (can[i - j] && wordDict.contains(s.substring(i - j, i))) {
+                //     can[i] = true;
+                //     break;
+                // }
+                if (can[j] && wordDict.contains(s.substring(j, i))) {
                     can[i] = true;
                     break;
                 }
@@ -15,12 +19,12 @@ public class Solution {
         }
         return can[s.length()];
     }
-    private int maxLength(Set<String> wordDict) {
-        int max = 0;
-        for (String s : wordDict) {
-            int len = s.length();
-            max = Math.max(len, max);
-        }
-        return max;
-    }
+    // private int maxLength(Set<String> wordDict) {
+    //     int max = 0;
+    //     for (String s : wordDict) {
+    //         int len = s.length();
+    //         max = Math.max(len, max);
+    //     }
+    //     return max;
+    // }
 }
