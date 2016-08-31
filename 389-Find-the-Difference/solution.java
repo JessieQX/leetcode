@@ -1,7 +1,7 @@
 public class Solution {
     public char findTheDifference(String s, String t) {
         Map<Character, Integer> map = new HashMap<>();
-        char res = '';
+        char res = ' ';
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (!map.containsKey(c)) {
