@@ -19,12 +19,5 @@ public class Solution {
         }
         return can[s.length()];
     }
-    // private int maxLength(Set<String> wordDict) {
-    //     int max = 0;
-    //     for (String s : wordDict) {
-    //         int len = s.length();
-    //         max = Math.max(len, max);
-    //     }
-    //     return max;
-    // }
+    
 }
