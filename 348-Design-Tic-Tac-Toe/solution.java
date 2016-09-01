@@ -24,7 +24,7 @@ public class TicTacToe {
         if (row == col) {
             diagonal += toAdd;
         }
-        if (col == (row.length - row - 1)) {
+        if (col == (col.length - row - 1)) {
             anti_diagonal += toAdd;
         }
         int size = row.length;
