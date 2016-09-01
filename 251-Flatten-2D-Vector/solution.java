@@ -1,6 +1,6 @@
 public class Vector2D implements Iterator<Integer> {
-    private Iterator<List<List<Integer>>> i;
-    private Iterator<List<Integer>> j;
+    private Iterator<List<Integer>> i;
+    private Iterator<Integer> j;
     public Vector2D(List<List<Integer>> vec2d) {
         i = vec2d.iterator();
     }
