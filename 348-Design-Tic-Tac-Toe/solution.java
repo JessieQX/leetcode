@@ -24,10 +24,10 @@ public class TicTacToe {
         if (row == col) {
             diagonal += toAdd;
         }
-        if (col == (n - row - 1)) {
+        if (col == (rows.length - row - 1)) {
             anti_diagonal += toAdd;
         }
-        int size = row.length;
+        int size = rows.length;
         if (Math.abs(rows[row]) == size || Math.abs(cols[col]) == size || Math.abs(diagonal) == size || Math.abs(anti_diagonal) == size) {
             return player;
         }
