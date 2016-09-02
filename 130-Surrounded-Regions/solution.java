@@ -31,9 +31,9 @@ public class Solution {
         if (board[i][j] == 'O') {
             board[i][j] = '1';
             if (i > 1) helper(board, i - 1, j, m, n);
-            if (i + 1 < m) helper(board, i + 1, j, m, n);
+            if (i + 1 < m - 1) helper(board, i + 1, j, m, n);
             if (j > 1) helper(board, i, j - 1, m, n);
-            if (j + 1 < n) helper(board, i, j + 1, m, n);
+            if (j + 1 < n - 1) helper(board, i, j + 1, m, n);
         }
     }
 }
