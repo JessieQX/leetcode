@@ -18,6 +18,7 @@ public class Solution {
         }
         while (!queue.isEmpty()) {
             int course = queue.poll();
+            count++;
             for (int i = 0; i < numCourses; i++) {
                 if (matrix[course][i] != 0) {
                     if (--indegree[i] == 0) {
@@ -26,6 +27,6 @@ public class Solution {
                 }
             }
         }
-        return count == numCourses
+        return count == numCourses;
     }
 }
