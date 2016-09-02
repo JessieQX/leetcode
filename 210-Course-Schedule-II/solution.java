@@ -15,7 +15,7 @@ public class Solution {
             adjs.get(edge[1]).add(edge[0]);
         }
     }
-    private int solveByBFS(int[] indegree, List<List<Integer>> adjs) {
+    private int[] solveByBFS(int[] indegree, List<List<Integer>> adjs) {
         int[] order = new int[indegree.length];
         Queue<Integer> queue = new LinkedList<>();
         for (int i = 0; i < indegree.length; i++) {
