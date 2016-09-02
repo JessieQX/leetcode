@@ -24,5 +24,13 @@ public class Solution {
         helper(grid, i - 1, j, m, n);
         helper(grid, i, j + 1, m, n);
         helper(grid, i, j - 1, m, n);
+        // if (grid[i][j] == '1') {
+        //     grid[i][j] = '0';
+        //     if (i > 1) helper(grid, i - 1, j, m, n);
+        //     if (i + 1 < m) helper(grid, i + 1, j, m, n);
+        //     if (j > 1) helper(grid, i, j - 1, m, n);
+        //     if (j + 1 < n) helper(grid, i, j + 1, m, n);
+        // }
+        // return;
     }
 }
