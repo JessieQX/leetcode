@@ -25,5 +25,30 @@ public class Solution {
             heap.offer(interval);
         }
         return heap.size();
+        // List<Interval> res = new ArrayList<>();
+        // if (intervals == null || intervals.length == 0) return 0;
+        // //Arrays.sort(intervals, (a, b) -> (a.start - b.start));
+        // Arrays.sort(intervals, new Comparator<Interval>(){
+        //     public int compare(Interval a, Interval b) {
+        //         if (a.start != b.start) {
+        //             return a.start - b.start;
+        //         } else {
+        //             return b.end - a.end;
+        //         }
+        //     }
+        // });
+        // int start = intervals[0].start;
+        // int end = intervals[0].end;
+        // for (int i = 1; i < intervals.length; i++) {
+        //     if (intervals[i].start >= end) {
+        //         end = intervals[i].end;
+        //     } else {
+        //         res.add(new Interval(start, end));
+        //         start = intervals[i].start;
+        //         end = intervals[i].end;
+        //     }
+        // }
+        // res.add(new Interval(start, end));
+        // return res.size();
     }
 }
