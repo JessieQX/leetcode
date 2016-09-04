@@ -6,27 +6,25 @@ public class NumMatrix {
         this.matrix = matrix;
         int m = matrix.length;
         int n = matrix[0].length;
-        nums = new int[m][n];
-        for (int i = 0; i < m; i++) {
+        nums = new int[m + 1][n];
+        for (int i = 1; i <= m; i++) {
             for (int j = 0; j < n; j++) {
-                nums[i][j] = matrix[i][j];
+                nums[i][j] = nums[i - 1][j] + matrix[i - 1][j];
             }
         }
     }
 
     public void update(int row, int col, int val) {
-        if (row < 0 || row >= matrix.length || col < 0 || col >= matrix[0].length) {
-            return;
+        for (int i = row + 1; i < nums.length; i++) {
+            nums[i][col] = nums[i][col] - matrix[row][col] + val;
         }
-        nums[row][col] = val;
+        matrix[row][col] = val;
     }
 
     public int sumRegion(int row1, int col1, int row2, int col2) {
         int sum = 0;
-        for (int i = row1; i <= row2; i++) {
-            for (int j = col1; j <= col2; j++) {
-                sum += nums[i][j];
-            }
+        for (int i = col1; i <= col2; i++) {
+            sum += nums[row2 + 1][i] - nums[row1][i];
         }
         return sum;
     }
