@@ -15,7 +15,7 @@ public class Solution {
         // for (Interval interval : intervals) {
         //     occupation.add(new ArrayList<>(Arrays.asList(interval.start, interval.end)));
         // }
-        Collections.sort(intervals, (a, b) -> a.get(0) - b.get(0));
+        Collections.sort(intervals, (a, b) -> a.start - b.start);
         //occupation.sort((a, b) -> a.get(0) - b.get(0));
         //List<Integer> pre = occupation.get(0);
         int start = intervals.get(0).start;
