@@ -10,6 +10,7 @@
 public class Solution {
     public List<Interval> merge(List<Interval> intervals) {
         List<Interval> res = new ArrayList<>();
+        if (intervals == null || interval.length == 0) return res;
         List<List<Integer>> occupation = new ArrayList<>();
         for (Interval interval : intervals) {
             occupation.add(new ArrayList<>(Arrays.asList(interval.start, interval.end)));
