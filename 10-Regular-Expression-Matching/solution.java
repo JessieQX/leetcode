@@ -1,6 +1,6 @@
 public class Solution {
     public boolean isMatch(String s, String p) {
-        if (p == null || p.length() == 0) return false;
+        //if (p == null || p.length() == 0) return false;
         if (!p.isEmpty() && p.charAt(0) == '*') return false;
         int m = s.length();
         int n = p.length();
@@ -9,7 +9,7 @@ public class Solution {
         for (int i = 1; i <= m; i++) {
             f[i][0] = false;
         }
-        for (int j = 1; i < n; j++) {
+        for (int j = 1; j < n; j++) {
             if (p.charAt(j) == '*') {
                 f[0][j + 1] = f[0][j - 1];
             }
