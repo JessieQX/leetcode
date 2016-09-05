@@ -1,6 +1,6 @@
 public class Solution {
     public boolean isMatch(String s, String p) {
-        //if (p == null || p.length() == 0) return false;
+        if (p == null || s == null) return false;
         if (!p.isEmpty() && p.charAt(0) == '*') return false;
         int m = s.length();
         int n = p.length();
