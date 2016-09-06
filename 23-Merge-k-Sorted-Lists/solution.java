@@ -12,6 +12,7 @@ public class Solution {
         //1->3->4->6
         //7->9
         //[0,1,7]
+        if (lists == null || lists.length == 0) return null;
         PriorityQueue<ListNode> pq = new PriorityQueue<>(lists.length, (a, b) -> (a.val - b.val));
         for (ListNode node : lists) {
             while (node != null) {
@@ -21,9 +22,10 @@ public class Solution {
         }
         
         ListNode head = pq.poll();
+        ListNode node = head;
         while (!pq.isEmpty()) {
-            head.next = pq.poll();
-            head = head.next;
+            node.next = pq.poll();
+            node = node.next;
         }
         return head;
     }
