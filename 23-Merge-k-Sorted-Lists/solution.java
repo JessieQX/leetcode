@@ -26,6 +26,9 @@ public class Solution {
         while (!pq.isEmpty()) {
             node.next = pq.poll();
             node = node.next;
+            if (node.next != null) {
+                pq.offer(node.next);
+            }
         }
         return head;
     }
