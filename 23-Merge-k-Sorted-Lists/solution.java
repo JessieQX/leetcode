@@ -33,7 +33,7 @@ public class Solution {
         // return head;
         if (lists==null||lists.length==0) return null;
         
-        PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.size(),new Comparator<ListNode>(){
+        PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.length,new Comparator<ListNode>(){
             @Override
             public int compare(ListNode o1,ListNode o2){
                 if (o1.val<o2.val)
