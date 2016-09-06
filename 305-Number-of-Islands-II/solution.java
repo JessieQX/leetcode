@@ -11,7 +11,7 @@ public class Solution {
             roots[root] = root;
             count++;
             
-            for (int[] d : dir) {A
+            for (int[] d : dir) {
                 int x = p[0] + d[0];
                 int y = p[1] + d[1];
                 int point = x * n + y;
@@ -19,7 +19,7 @@ public class Solution {
                 int rootPoint = find(roots, point);
                 if (rootPoint != root) {
                     roots[root] = rootPoint;
-                    //root = rootPoint;
+                    root = rootPoint;
                     count--;
                 }
             }
