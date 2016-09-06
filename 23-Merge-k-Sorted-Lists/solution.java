@@ -31,7 +31,7 @@ public class Solution {
         //     }
         // }
         // return head;
-        if (lists==null||lists.size()==0) return null;
+        if (lists==null||lists.length==0) return null;
         
         PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.size(),new Comparator<ListNode>(){
             @Override
