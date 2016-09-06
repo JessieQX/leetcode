@@ -12,17 +12,17 @@ public class Solution {
         //1->3->4->6
         //7->9
         //[0,1,7]
-        PriorityQueue<ListNode> pq = new PriorityQueue<>(lists.length, (a, b) -> (a.val - b.val));
+        PriorityQueue<Integer> pq = new PriorityQueue<>(lists.length, (a, b) -> (a.val - b.val));
         for (ListNode node : lists) {
             while (node != null) {
-                pq.offer(node);
+                pq.offer(node.val);
                 node = node.next;
             }
         }
         
         ListNode head = new ListNode(pq.poll());
         while (!pq.isEmpty()) {
-            head.next = pq.poll();
+            head.next = new ListNode(pq.poll());
             head = head.next;
         }
         return head;
