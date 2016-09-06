@@ -49,9 +49,11 @@ public class Solution {
         ListNode dummy = new ListNode(0);
         ListNode tail=dummy;
         
-        for (ListNode node:lists)
-            if (node!=null)
+        for (ListNode node:lists) {
+            if (node!=null) {
                 queue.add(node);
+            }
+        }
             
         while (!queue.isEmpty()){
             tail.next=queue.poll();
