@@ -21,6 +21,7 @@ public class Solution {
         root.right = prev;
         root.left = null;
         prev = root;
+        //flatten(prev.left);
     }
 //     public void flatten(TreeNode root) {
 // 		if (root == null) {
