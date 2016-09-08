@@ -59,7 +59,7 @@ class TrieNode {
     
     public boolean startsWith(String prefix) {
         TrieNode node = this;
-        char[] chars = word.toCharArray();
+        char[] chars = prefix.toCharArray();
         for (char c : chars) {
             if (children[c - 'a'] == null) {
                 return false;
