@@ -1,6 +1,7 @@
 public class Solution {
     public List<String> findWords(char[][] board, String[] words) {
-        List<String> res = new ArrayList<>();
+        //List<String> res = new ArrayList<>();
+        Set<String> res = new HashSet<>();
         TrieNode trie = new TrieNode();
         for (String word : words) {
             trie.insert(word);
@@ -10,9 +11,9 @@ public class Solution {
                 dfs(board, i, j, trie, res, "");
             }
         }
-        return res;
+        return new ArrayList<>(res);
     }
-    private void dfs(char[][] board, int i, int j, TrieNode node, List<String> res, String str) {
+    private void dfs(char[][] board, int i, int j, TrieNode node, Set<String> res, String str) {
         if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) return;
         char c = board[i][j];
         if (board[i][j] == '#') return;
@@ -37,7 +38,7 @@ class TrieNode {
         TrieNode node = this;
         char[] chars = word.toCharArray();
         for (char c : chars) {
-            if (children[c - 'a'] == null) {
+            if (node.children[c - 'a'] == null) {
                 node.children[c - 'a'] = new TrieNode();
             }
             node = node.children[c - 'a'];
@@ -49,7 +50,7 @@ class TrieNode {
         TrieNode node = this;
         char[] chars = word.toCharArray();
         for (char c : chars) {
-            if (children[c - 'a'] == null) {
+            if (node.children[c - 'a'] == null) {
                 return false;
             }
             node = node.children[c - 'a'];
@@ -61,7 +62,7 @@ class TrieNode {
         TrieNode node = this;
         char[] chars = prefix.toCharArray();
         for (char c : chars) {
-            if (children[c - 'a'] == null) {
+            if (node.children[c - 'a'] == null) {
                 return false;
             }
             node = node.children[c - 'a'];
