@@ -30,6 +30,6 @@ public class Solution {
             if (root.right.val < root.val) return false;
         }
         
-        return isValid(root.left) && isValid(root.right);
+        return isValidBST(root.left) && isValidBST(root.right);
     }
 }
