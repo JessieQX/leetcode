@@ -3,7 +3,7 @@ public class MedianFinder {
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
     // Adds a number into the data structure.
     public void addNum(int num) {
-        minHeap.add(num);
+        minHeap.add(double(num));
         if (minHeap.size() > maxHeap.size()) {
             maxHeap.offer(minHeap.poll());
         }
@@ -12,7 +12,7 @@ public class MedianFinder {
     // Returns the median of current data stream
     public double findMedian() {
         if (minHeap.size() == maxHeap.size()) {
-            return (Double.parseDouble(minHeap.peek()) + Double.parseDouble(maxHeap.peek())) / 2;
+            return (minHeap.peek() + maxHeap.peek()) / 2;
         }
         return maxHeap.peek();
     }
