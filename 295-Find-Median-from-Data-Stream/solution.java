@@ -3,8 +3,8 @@ public class MedianFinder {
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
     // Adds a number into the data structure.
     public void addNum(int num) {
-        double num = num;
-        minHeap.add(num);
+        double d = num;
+        minHeap.add(d);
         if (minHeap.size() > maxHeap.size()) {
             maxHeap.offer(minHeap.poll());
         }
