@@ -1,5 +1,5 @@
 public class Solution {
-    public int largestRectangleArea(int[] heights) {
+    public int largestRectangleArea(int[] height) {
         Stack<Integer> stack = new Stack<Integer>();
 	int max_area = 0;
 	
