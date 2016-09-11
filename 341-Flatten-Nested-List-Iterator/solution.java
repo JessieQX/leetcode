@@ -25,7 +25,7 @@ public class NestedIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        stack.pop.getInteger();
+        stack.pop().getInteger();
     }
 
     @Override
