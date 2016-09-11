@@ -8,21 +8,26 @@
  * }
  */
 public class Solution {
-    private static int count = 0;
     public int countUnivalSubtrees(TreeNode root) {
-        helper(root);
-        return count;
+        int[] count = new int[1];
+        helper(root, count);
+        return count[0];
     }
-    private boolean isUnivalue(TreeNode root) {
-        if (root == null) {
+    
+    private boolean helper(TreeNode node, int[] count) {
+        if (node == null) {
             return true;
         }
-        boolean left = isUnivalue(root.left);
-        boolean right = isUnivalue(root.right);
-        if (left && right) {//不能直接在if里写if(isUnivalue(root.left) && isUnivalue(root.right))，可能是在left为false的情况下不会判断right直接进入false
-            if (root.left != null && root.val != root.left.val) return false;
-            if (root.right != null && root.val != root.right.val) return false;
-            count++;
+        boolean left = helper(node.left, count);
+        boolean right = helper(node.right, count);
+        if (left && right) {
+            if (node.left != null && node.val != node.left.val) {
+                return false;
+            }
+            if (node.right != null && node.val != node.right.val) {
+                return false;
+            }
+            count[0]++;
             return true;
         }
         return false;
