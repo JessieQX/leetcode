@@ -13,21 +13,18 @@ public class Solution {
         helper(root);
         return count;
     }
-    private TreeNode helper(TreeNode root) {
-        if (root == null) return null;
-        TreeNode left = helper(root.left);
-        TreeNode right = helper(root.right);
-        if (left == null && right == null) {
-            System.out.println("a");
-            count++;
-        } else if (left == null && root.val == right.val) {
-            count++;
-        } else if (right == null && root.val == left.val) {
-            count++;
-        } else if (left.val == right.val && left.val == root.val) {
-            System.out.println("b");
-            count++;
+    private boolean isUnivalue(TreeNode root) {
+        if (root == null) {
+            return true;
         }
-        return root;
+        boolean left = isUnivalue(root.left);
+        boolean right = isUnivalue(root.right);
+        if (left && right) {//不能直接在if里写if(isUnivalue(root.left) && isUnivalue(root.right))，可能是在left为false的情况下不会判断right直接进入false
+            if (root.left != null && root.val != root.left.val) return false;
+            if (root.right != null && root.val != root.right.val) return false;
+            count++;
+            return true;
+        }
+        return false;
     }
 }
