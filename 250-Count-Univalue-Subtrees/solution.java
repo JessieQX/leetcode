@@ -8,6 +8,7 @@
  * }
  */
 public class Solution {
+    private static int count = 0;
     public int countUnivalSubtrees(TreeNode root) {
         int[] count = new int[1];
         helper(root, count);
