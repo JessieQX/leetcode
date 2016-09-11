@@ -36,7 +36,7 @@ public class NestedIterator implements Iterator<Integer> {
             stack.pop();
             List<NestedInteger> list = m.getList();
             for (int i = list.size() - 1; i >= 0; i--) {
-                stack.push(list.get(i).getInteger());
+                stack.push(list.get(i));
             }
         }
         return false;
