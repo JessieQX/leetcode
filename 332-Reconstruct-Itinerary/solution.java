@@ -2,9 +2,9 @@ public class Solution {
     private Map<String, PriorityQueue<String>> flights = new HashMap<>();
     //private List<String> res = new ArrayList<>();
     public List<String> findItinerary(String[][] tickets) {
-        for (String[] : tickets) {
-            flights.putIfAbsent(String[0], new PriorityQueue<>());
-            flights.get(String[0]).add(String[1]);
+        for (String[] s : tickets) {
+            flights.putIfAbsent(s[0], new PriorityQueue<>());
+            flights.get(s[0]).add(s[1]);
         }
         helper("JFK", new ArrayList<>());
         return res;
