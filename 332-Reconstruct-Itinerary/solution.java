@@ -14,7 +14,7 @@ public class Solution {
         PriorityQueue<String> queue = flights.get(departure);
         while (!queue.isEmpty()) {
             String destination = queue.poll();
-            helper(destination);
+            helper(destination, res);
         }
         res.add(0, departure);
     }
