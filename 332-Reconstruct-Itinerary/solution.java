@@ -6,7 +6,8 @@ public class Solution {
             flights.putIfAbsent(s[0], new PriorityQueue<>());
             flights.get(s[0]).add(s[1]);
         }
-        helper("JFK", new ArrayList<>());
+        List<String> res = new ArrayList<>();
+        helper("JFK", res);
         return res;
     }
     private void helper(String departure, List<String> res) {
