@@ -31,6 +31,7 @@ public class Solution {
                     left = start;
                 }
                 start++;
+                if (start >= s.length()) break;
                 map.put(s.charAt(start), map.get(s.charAt(start)) + 1);
                 count--;
             }
