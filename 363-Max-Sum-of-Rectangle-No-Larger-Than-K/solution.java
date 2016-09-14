@@ -13,7 +13,7 @@ public class Solution {
                 for (int i = 0; i < m; i++) {
                     sums[i] += matrix[i][right];
                 }
-                Set<Integer> set = new TreeSet<>();
+                TreeSet<Integer> set = new TreeSet<>();
                 set.add(0);
                 int currSum = 0;
                 for (int sum : sums) {
