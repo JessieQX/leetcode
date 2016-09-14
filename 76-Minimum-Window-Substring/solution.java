@@ -36,7 +36,7 @@ public class Solution {
                 count--;
             }
         }
-        res = s.substring(left, left + len);
-        return res;
+        //res = s.substring(left, left + len);
+        return len = Integer.MAX_VALUE ? "" : s.substring(left, left + len);
     }
 }
