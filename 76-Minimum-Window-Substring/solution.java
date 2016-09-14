@@ -1,6 +1,6 @@
 public class Solution {
     public String minWindow(String s, String t) {
-        if (s == null || t == null) return "";
+        if (s == null || t == null || s.length() < t.length()) return "";
         String res = "";
         Map<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < t.length(); i++) {
