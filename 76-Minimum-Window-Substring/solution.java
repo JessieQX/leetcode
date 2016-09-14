@@ -37,6 +37,6 @@ public class Solution {
             }
         }
         //res = s.substring(left, left + len);
-        return len = Integer.MAX_VALUE ? "" : s.substring(left, left + len);
+        return len == Integer.MAX_VALUE ? "" : s.substring(left, left + len);
     }
 }
