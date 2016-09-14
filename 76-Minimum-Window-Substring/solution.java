@@ -25,6 +25,11 @@ public class Solution {
                 while (!map.containsKey(s.charAt(start))) {
                     start++;
                 }
+                while (map.get(s.charAt(start)) < 0) {
+                    start++;
+                    map.put(s.charAt(start - 1), map.get(s.charAt(start - 1)) + 1);
+                    count--;
+                }
                 int dist = end - start + 1;
                 if (dist < len) {
                     len = dist;
@@ -32,7 +37,7 @@ public class Solution {
                 }
                 start++;
                 if (start >= s.length()) break;
-                map.put(s.charAt(start), map.get(s.charAt(start)) + 1);
+                map.put(s.charAt(start - 1), map.get(s.charAt(start - 1)) + 1);
                 count--;
             }
         }
