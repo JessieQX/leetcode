@@ -12,13 +12,15 @@ public class Solution {
         }
         return pq.poll().val;
     }
-    class Point {
+    class Point implements Comparable<Point> {
         int x, y, val;
         public Point(int x, int y, int val) {
             this.x = x;
             this.y = y;
             this.val = val;
         }
-        
+        public int compareTo(Point p) {
+            return this.val - p.val;
+        }
     }
 }
