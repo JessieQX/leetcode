@@ -10,7 +10,7 @@ public class Solution {
             if (p.x == n - 1) continue;
             pq.offer(new Point(p.x + 1, p.y, matrix[p.x + 1][p.y]));
         }
-        return pq.poll();
+        return pq.poll().val;
     }
     class Point implements Comparator<Point> {
         int x, y, val;
