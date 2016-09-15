@@ -12,15 +12,15 @@ public class Solution {
         }
         return pq.poll();
     }
-    class Point {
+    class Point implements Comparator<Point> {
         int x, int y, int val;
         public Point(int x, int y, int val) {
             this.x = x;
             this.y = y;
             this.val = val;
         }
-        // public int compareTo(Point p) {
-        //     return this.val - p.val;
-        // }
+        public int compareTo(Point p) {
+            return this.val - p.val;
+        }
     }
 }
