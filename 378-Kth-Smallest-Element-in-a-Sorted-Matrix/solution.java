@@ -12,7 +12,7 @@ public class Solution {
         }
         return pq.poll().val;
     }
-    class Point implements Comparator<Point> {
+    class Point implements Comparable<Point> {
         int x, y, val;
         public Point(int x, int y, int val) {
             this.x = x;
