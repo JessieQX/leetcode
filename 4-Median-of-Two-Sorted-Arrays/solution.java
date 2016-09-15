@@ -9,7 +9,7 @@ public class Solution {
             j = mid - i;
             if (i > 0 && j < n && nums1[i - 1] > nums2[j]) {
                 max = i - 1;
-            } else if (j > 0 && i < m && nums[j - 1] > nums2[i]) {
+            } else if (j > 0 && i < m && nums2[j - 1] > nums1[i]) {
                 min = i + 1;
             } else {
                 break;
@@ -23,6 +23,6 @@ public class Solution {
         if (i == m) rightMin = nums2[j];
         else if (j == n) rightMin = nums1[i];
         else rightMin = Math.min(nums1[i], nums2[j]);
-        return (leftMax + rightMin) / 2;
+        return (leftMax + rightMin) / 2.0;
     }
 }
