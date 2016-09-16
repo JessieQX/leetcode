@@ -22,7 +22,7 @@ public class Solution {
             else if (s.charAt(i) == ']') {
                 StringBuilder sb = new StringBuilder(wordStack.pop());
                 int num = countStack.pop();
-                for (int i = 0; i < num; i++) {
+                for (int j = 0; j < num; j++) {
                     sb.append(res);
                 }
                 res = sb.toString();
