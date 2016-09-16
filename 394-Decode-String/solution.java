@@ -30,6 +30,7 @@ public class Solution {
             }
             else {
                 res += s.charAt(i);
+                i++;
             }
         }
         return res;
