@@ -23,7 +23,7 @@ public class Solution {
             this.val = val;
         }
         public int compareTo(Point p) {
-            this.val - p.val;
+            return this.val - p.val;
         }
     }
 }
