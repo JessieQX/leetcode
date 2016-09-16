@@ -1,6 +1,8 @@
 public class Solution {
     public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         List<int[]> res = new ArrayList<>();
+        if (nums1 == null || nums2 == null) return res;
+        
         PriorityQueue<Point> pq = new PriorityQueue<>();
         for (int i = 0; i < nums1.length; i++) {
             for (int j = 0; j < nums2.length; j++) {
