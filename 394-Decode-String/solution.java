@@ -14,12 +14,12 @@ public class Solution {
                 }
                 countStack.push(count);
             }
-            else if (c == '[') {
+            else if (s.charAt(i) == '[') {
                 wordStack.push(res);
                 res = "";
                 i++;
             }
-            else if (c == ']') {
+            else if (s.charAt(i) == ']') {
                 StringBuilder sb = new StringBuilder(wordStack.pop());
                 int num = countStack.pop();
                 for (int i = 0; i < num; i++) {
