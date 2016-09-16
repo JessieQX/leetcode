@@ -4,7 +4,7 @@ public class Solution {
         PriorityQueue<Point> pq = new PriorityQueue<>();
         for (int i = 0; i < nums1.length; i++) {
             for (int j = 0; j < nums2.length; j++) {
-                pq.offer(nums1[i], nums2[j], nums1[i] + nums2[j]);
+                pq.offer(new Point(nums1[i], nums2[j], nums1[i] + nums2[j]));
             }
         }
         for (int i = 0; i < k; i++) {
