@@ -9,6 +9,7 @@ public class Solution {
                 pq.offer(new Point(nums1[i], nums2[j], nums1[i] + nums2[j]));
             }
         }
+        k = pq.size() >= k ? k : pq.size();
         for (int i = 0; i < k; i++) {
             Point p = pq.poll();
             int x = p.x;
