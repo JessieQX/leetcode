@@ -32,5 +32,6 @@ public class Solution {
                 res += s.charAt(i);
             }
         }
+        return res;
     }
 }
