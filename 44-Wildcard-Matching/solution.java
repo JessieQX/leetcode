@@ -16,7 +16,7 @@ public class Solution {
                     f[i][j] = f[i - 1][j - 1];
                 } else {
                     if (p.charAt(i - 1) == '*') {
-                        f[i][j] = f[i - 1][j - 1] || f[i - 1][j] || f[i][j - 1];
+                        f[i][j] = f[i - 1][j] || f[i][j - 1];
                     }
                 }
             }
