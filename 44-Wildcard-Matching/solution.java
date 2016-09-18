@@ -1,7 +1,7 @@
 public class Solution {
     public boolean isMatch(String s, String p) {
         if (s.isEmpty() && p.isEmpty()) return true;
-        if ((s.isEmpty() || p.isEmpty()) && (s.equals("*") || p.equals("*")) return true;
+        if ((s.isEmpty() || p.isEmpty()) && (s.equals("*") || p.equals("*"))) return true;
         if (s.isEmpty() || p.isEmpty()) return false;
         int m = s.length();
         int n = p.length();
