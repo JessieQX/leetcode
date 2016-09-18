@@ -17,6 +17,6 @@ public class Solution {
             }
             res = Math.max(res, f[i]);
         }
-        return f[n];
+        return res;
     }
 }
