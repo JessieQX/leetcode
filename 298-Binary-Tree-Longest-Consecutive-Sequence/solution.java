@@ -20,7 +20,7 @@ public class Solution {
             count++;
         } else {
             count = 1;
-        }
+        }//3,4,6,#,7,#,8,#
         max = Math.max(count, max);
         helper(root.left, count, root.val + 1);
         helper(root.right, count, root.val + 1);
