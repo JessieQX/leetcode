@@ -6,9 +6,9 @@ public class Solution {
             steps[i] = Integer.MAX_VALUE;
             for (int j = 0; j < i; j++) {
                 if (steps[j] != Integer.MAX_VALUE && nums[j] + j >= i) {
-                    // steps[i] = steps[j] + 1;
-                    // break;
-                    steps[i] = Math.min(steps[j] + 1, steps[i]);
+                    steps[i] = steps[j] + 1;
+                    break;
+                    //steps[i] = Math.min(steps[j] + 1, steps[i]);
                 }
             }
         }
