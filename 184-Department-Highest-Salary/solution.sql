@@ -1,7 +1,6 @@
 # Write your MySQL query statement below
-
-
-select New.Name as Department, New.Name as Employee, max(New.Salary) as Salary
-from (select Employee.Id, Employee.Name as Name, Employee.Salary as Salary, Department.Name as Name from Employee, Department
-    where Employee.DepartmentId = Department.Id) New
-group by New.Salary;
+select Department.Name as Department, Employee.Name as Employee, Employee.Salary 
+from Department, Employee, (select Employee.DepartmentId, max(Employee.Salary) as max from Employee group by Employee.DepartmentId) New
+where Employee.DepartmentId = Department.Id
+AND New.max = Employee.Salary
+and New.DepartmentId = Department.Id;
