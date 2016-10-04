@@ -1,3 +1,3 @@
 # Write your MySQL query statement below
 #delete p2 from Person p1, Person p2 where p1.Email = p2.Email and p1.Id < p2.Id;
-select id, distinct email from email;
+select id, distinct email from person;
